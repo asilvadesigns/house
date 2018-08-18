@@ -1510,7 +1510,7 @@ button.room:hover .room__buffer {
  */
 
 .container {
-  width: 43rem;
+  max-width: 43rem;
   margin: 0 auto;
   padding: 1rem;
   overflow-x: hidden;
