@@ -111,6 +111,7 @@ ul {
   background-color: white;
   box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
   transition: transform 0.125s ease-in-out;
+  overflow-y: auto;
 }
 
 .core__sidebar__toggle {
