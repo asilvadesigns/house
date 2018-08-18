@@ -1,0 +1,1703 @@
+/**
+ * Reset
+ */
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  text-align: left;
+  background-color: transparent;
+  border: 0 none;
+  cursor: pointer;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 1rem 0;
+  background-color: currentColor;
+  border: 0;
+}
+
+/**
+ * Typography
+ */
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  font-size: 1rem;
+  font-family: sans-serif;
+  line-height: 1.414;
+  background-color: #e8e8e8;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+p,
+ul {
+  margin-bottom: 1.414rem;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+.img {
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  background-position: center;
+  background-size: cover;
+}
+
+.panel {
+  margin-bottom: 1.414rem;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.panel__title {
+  margin-bottom: 0.5rem;
+}
+
+.panel__title::before {
+  display: block;
+  content: "We liked:";
+  font-weight: 500;
+  font-size: calc(1.414em / 2);
+  font-style: normal;
+}
+
+.panel__link {
+  display: block;
+  margin-top: calc(1.414rem / 2);
+}
+
+/**
+ * Core UI
+ */
+.core {
+  width: 100%;
+  height: 100%;
+}
+
+.core__sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 90%;
+  max-width: 200px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.125s ease-in-out;
+}
+
+.core__sidebar__toggle {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.core__sidebar__header {
+  padding-top: 0.25rem;
+}
+
+.core__content {
+  position: relative;
+  width: calc(100% - 200px);
+  height: 100%;
+  margin-left: 200px;
+  transition: width 0.125s ease-in-out, margin-left 0.125s ease-in-out;
+}
+
+.core__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.25;
+  transition: opacity 0.125s ease-in-out;
+  pointer-events: all;
+}
+
+.core__content .nav--fixed {
+  width: calc(100% - 200px);
+  margin-left: 200px;
+}
+
+.core.grid-is-hidden .room__buffer::after,
+.core.grid-is-hidden .room__buffer::before {
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .core.mobile-is-collapsed .core__sidebar {
+    transform: translateX(-100%);
+  }
+
+  .core.mobile-is-collapsed .core__backdrop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .core .core__content,
+  .core .core__content .nav--fixed {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .core__backdrop {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .core.desktop-is-collapsed .core__sidebar {
+    transform: translateX(-100%);
+  }
+
+  .core.desktop-is-collapsed .core__content,
+  .core.desktop-is-collapsed .core__content .nav--fixed {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/**
+ * Sidebar Collapse Menu
+ */
+.menu {
+  position: relative;
+  padding: 0.75rem;
+}
+
+.menu__buffer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1rem;
+  height: 0.75rem;
+  pointer-events: none;
+}
+
+.menu__line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 3px;
+  transform-origin: center;
+}
+
+.menu__line:nth-child(1) {
+  top: 0;
+}
+
+.menu__line:nth-child(3) {
+  bottom: 0;
+}
+
+.menu--grid {
+  color: dodgerblue;
+  transition: color 0.125s ease-in-out;
+}
+
+.core.grid-is-hidden .menu--grid {
+  color: inherit;
+}
+
+.menu--grid .menu__buffer {
+  width: 0.75rem;
+}
+
+.menu--grid .menu__line:nth-child(1),
+.menu--grid .menu__line:nth-child(2),
+.menu--grid .menu__line:nth-child(3),
+.menu--grid .menu__line:nth-child(4) {
+  width: 2px;
+  height: 100%;
+}
+
+.menu--grid .menu__line:nth-child(1) {
+  left: 0;
+  width: 1px;
+}
+
+.menu--grid .menu__line:nth-child(2) {
+  right: 50%;
+  width: 1px;
+}
+
+.menu--grid .menu__line:nth-child(3) {
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.menu--grid .menu__line:nth-child(4) {
+  right: 0;
+}
+
+.menu--grid .menu__line:nth-child(5) {
+  top: 0;
+  height: 1px;
+}
+
+.menu--grid .menu__line:nth-child(6) {
+  bottom: 0;
+}
+
+/**
+ * Navigation
+ */
+.nav {
+  display: flex;
+  background-color: white;
+}
+
+.nav--inline {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.nav--stacked {
+  flex-direction: column;
+}
+
+.nav--numbered {
+  counter-reset: navs;
+}
+
+.nav--numbered .nav__link {
+  counter-increment: navs;
+  position: relative;
+}
+
+.nav--numbered .nav__link::before {
+  content: counter(navs);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  font-size: calc(1.414em / 2);
+  opacity: 0.25;
+}
+
+.nav__item {
+  display: block;
+  padding: 0.25rem 1rem;
+}
+
+.nav__divider {
+  padding: 0;
+  opacity: 0.2;
+}
+
+.nav__item--nested {
+  padding-left: 2rem;
+}
+
+.nav__link {
+  width: 100%;
+}
+
+.nav__link.active {
+  color: dodgerblue;
+}
+
+.nav__content {
+  position: relative;
+  height: 100%;
+}
+
+.nav__pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin-top: calc(2.414rem * 2);
+  pointer-events: none;
+  /* opacity: 0;
+  transition: opacity 0.125s ease-in-out; */
+}
+
+.nav__pane.active {
+  display: block;
+  pointer-events: all;
+  /* opacity: 1; */
+}
+
+/**
+ * Headings
+ */
+.title {
+  margin-top: 1rem;
+}
+
+.subtitle {
+  margin-bottom: 0.5rem;
+  font-size: calc(1 / 1.414 * 100%);
+}
+
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+/**
+ * Items | Bathtub
+ */
+.bathtub,
+.bathtub__tub {
+  border: 1px solid;
+}
+
+.bathtub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bathtub__tub {
+  width: 90%;
+  height: 90%;
+  border-radius: 2.6rem;
+}
+
+.bathtub--vertical {
+  width: 2.6rem;
+  height: 5rem;
+}
+
+.bathtub--horizontal {
+  width: 5rem;
+  height: 2.6rem;
+}
+
+/**
+ * Items | Toilet
+ */
+.toilet {
+  position: relative;
+  border: 1px solid;
+}
+
+.toilet__item {
+  position: absolute;
+}
+
+.toilet__tank {
+  border: 1px solid;
+  border-radius: 0.2rem;
+}
+
+.toilet__bowl {
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.toilet--vertical {
+  width: 3rem;
+  height: 4rem;
+}
+
+.toilet--vertical .toilet__item {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toilet--vertical .toilet__tank {
+  bottom: 0.25rem;
+  width: 1.75rem;
+  height: 1rem;
+}
+
+.toilet--vertical .toilet__bowl {
+  bottom: 1.25rem;
+  width: 1.25rem;
+  height: 1.5rem;
+}
+
+.toilet--vertical.toilet--flipped {
+  transform: scaleY(-1);
+}
+
+.toilet--horizontal {
+  width: 4rem;
+  height: 3rem;
+}
+
+.toilet--horizontal .toilet__item {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toilet--horizontal .toilet__tank {
+  left: 0.25rem;
+  width: 1rem;
+  height: 1.75rem;
+}
+
+.toilet--horizontal .toilet__bowl {
+  left: 1.25rem;
+  width: 1.5rem;
+  height: 1.25rem;
+}
+
+.toilet--horizontal.toilet--flipped {
+  transform: scaleX(-1);
+}
+
+/**
+ * Rooms
+ */
+
+.room {
+  position: absolute;
+  padding: 0.25rem;
+  overflow: hidden;
+  outline: 0;
+}
+
+.room--flush {
+  padding: 0;
+}
+
+.room__item {
+  position: absolute !important;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.room__buffer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+button.room:focus .room__buffer,
+button.room:hover .room__buffer {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.room--dining {
+  width: calc(11rem + 0.5rem);
+  height: calc(13rem + 0.5rem);
+}
+
+.room--kitchen {
+  width: calc(16rem + 0.5rem);
+  height: calc(13rem + 0.5rem);
+}
+
+.room--kitchen .sink {
+  left: calc(7.75rem - 1px);
+}
+
+.room--kitchen .pantry .door {
+  left: calc(-100% + 1rem - 0.3rem);
+}
+
+.room--office {
+  width: calc(11rem + 0.5rem);
+  height: calc(13rem + 0.5rem);
+}
+
+.room--utility {
+  width: calc(5rem + 0.5rem);
+  height: calc(6rem + 0.5rem);
+}
+
+.room--powder {
+  width: calc(7rem + 0.5rem);
+  height: calc(6rem + 0.5rem);
+}
+
+.room--closet {
+  width: calc(4rem + 0.5rem);
+  height: calc(6rem + 0.5rem);
+}
+
+.room--porch {
+  width: calc(13rem + 0.5rem);
+  height: calc(6rem + 0.5rem);
+}
+
+.room--stairs {
+  width: calc(14rem + 0.5rem);
+  height: calc(3rem + 0.5rem);
+}
+
+.room--opening {
+  width: calc(14rem + 0.5rem);
+  height: calc(3rem + 0.5rem);
+}
+
+.room--living {
+  width: calc(13rem + 0.5rem);
+  height: calc(20rem + 0.5rem);
+}
+
+.room--master-closet {
+  width: calc(6rem + 0.5rem);
+  height: calc(7rem + 0.5rem);
+}
+
+.room--master-bed {
+  width: calc(13rem + 0.5rem);
+  height: calc(16rem + 0.5rem);
+}
+
+.room--master-bath {
+  width: calc(12rem + 0.5rem);
+  height: calc(10rem + 0.5rem);
+}
+
+.room--laundry {
+  width: calc(7rem + 0.5rem);
+  height: calc(7rem + 0.5rem);
+}
+
+.room--bathroom {
+  width: calc(8rem + 0.5rem);
+  height: calc(10rem + 0.5rem);
+}
+
+.room--bedroom-1 {
+  width: calc(12rem + 0.5rem);
+  height: calc(13rem + 0.5rem);
+}
+
+.room--bedroom-2 {
+  width: calc(13rem + 0.5rem);
+  height: calc(13rem + 0.5rem);
+}
+
+.room--sitting-area {
+  width: calc(10.25rem + 0.5rem);
+  height: calc(7rem + 0.5rem);
+}
+
+.room--basement {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * Area
+ */
+
+.area {}
+
+.area--porch {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+}
+
+/**
+ * Cabinets
+ */
+
+.cabinets {
+  border: 1px solid;
+}
+
+.cabinets--pantry {
+  border-color: transparent;
+}
+
+.cabinets--pantry .pantry {
+  position: absolute;
+  border-left: 1px solid;
+  transform: translateX(calc(50% + 1px)) translateY(calc(50% + 1px)) rotateZ(45deg);
+  transform-origin: center center;
+}
+
+/**
+ * Closet
+ */
+
+.closet {
+  border: 2px dashed transparent;
+}
+
+.closet--open-left {
+  border-left-color: currentColor;
+}
+
+.closet--open-right {
+  border-right-color: currentColor;
+}
+
+.closet--open-top {
+  border-top-color: currentColor;
+}
+
+.closet--open-bottom {
+  border-bottom-color: currentColor;
+}
+
+/**
+ * Dishwasher
+ */
+
+.dishwasher {
+  border: 1px solid;
+}
+
+.dishwasher--opens-down {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+/**
+ * Doors
+ */
+
+.door {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.door--sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.door--xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.door::before,
+.door::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid;
+}
+
+.door::before {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.door::after {
+  z-index: 20;
+}
+
+.door--left::before {
+  left: -1px;
+  border-bottom-width: 2px;
+  border-top-right-radius: 2.5rem;
+}
+
+.door--left::after {
+  left: -0.25rem;
+  width: 0.25rem;
+  background-color: #e8e8e8;
+}
+
+/**
+ * Fridge
+ */
+
+.fridge {
+  border: 1px solid;
+}
+
+.fridge--opens-right {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/**
+ * Island
+ */
+
+.island {
+  border: 1px solid;
+}
+
+/**
+ * Roof
+ */
+
+.roof {
+  border-bottom: 1px solid;
+}
+
+.roof::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-bottom: 1px solid transparent;
+}
+
+.roof--front,
+.roof--back {
+  background-image: repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent calc(10 / 12 * 1rem));
+}
+
+.roof--front::after,
+.roof--back::after {
+  border-bottom-color: currentColor;
+}
+
+.roof--right,
+.roof--left {
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* roof height */
+  height: 12rem;
+  overflow: hidden;
+  border-color: transparent;
+}
+
+.roof--right .roof__buffer,
+.roof--left .roof__buffer {
+  top: 0;
+  left: 0;
+  width: 26rem;
+  height: 26rem;
+  transform: scaleY(0.74);
+  transform-origin: top center;
+}
+
+.roof--right .roof__buffer::after,
+.roof--left .roof__buffer::after {
+  content: "";
+  position: absolute;
+  top: calc(5.25rem + 0.25rem - 2px);
+  left: 0;
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1px solid;
+  transform: rotateZ(-45deg);
+}
+
+.roof--right .roof__buffer::before,
+.roof--left .roof__buffer::before {
+  content: "";
+  position: absolute;
+  top: calc(5.25rem + 1rem - 2px);
+  left: 0;
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  border: 1px solid;
+  transform: rotateZ(-45deg);
+}
+
+/* .roof--right::after,
+.roof--left::after {
+  border-bottom-color: currentColor;
+} */
+
+/**
+ * Sink
+ */
+
+.sink {}
+
+.sink__bowl {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border: 1px solid;
+  border-radius: 0.25rem;
+}
+
+/**
+ * Steps
+ */
+
+.steps {
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent calc(10 / 12 * 1rem));
+}
+
+.steps::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  padding: 0 0.5rem;
+  font-family: monospace;
+  background-color: #e8e8e8;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  transform: translateX(-50%) translateY(-50%);
+}
+/* 
+.steps--going-up::after {
+  content: "\21E0 Up";
+}
+
+.steps--going-down::after {
+  content: "Down \21E2";
+} */
+
+/**
+ * Stove
+ */
+.stove {
+  display: flex;
+  flex-wrap: wrap;
+  width: 2.75rem;
+  margin-top: 0.125rem;
+  border: 1px solid;
+}
+
+.stove__burner {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: 0.125rem 0.25rem;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+/**
+ * Label
+ */
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  padding: 0 0.25rem;
+  font-family: monospace;
+  background-color: #e8e8e8;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.room__label {
+  z-index: 50;
+}
+
+/**
+ * Wall
+ */
+.wall {
+  background-color: currentColor;
+}
+
+.wall--hidden {
+  background-color: #e8e8e8;
+}
+
+/**
+ * Window
+ */
+.window {
+  background-color: white;
+  border: 1px solid;
+}
+
+.window--skylight {
+  z-index: 20;
+  background-color: #e8e8e8 !important;
+}
+
+.window--skylight::after {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  left: 2px;
+  display: block;
+  width: calc(100% - 4px);
+  height: 1px;
+  background-color: currentColor;
+}
+
+.window__door {
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 25px);
+  border: 1px solid;
+}
+
+.window__door--flush-right {
+  right: 0;
+  width: calc(100% - 7px);
+}
+
+.window__door--flush-left {
+  right: 6px;
+  left: auto;
+  width: calc(100% - 7px);
+}
+
+.window.t0 {
+  top: -0.25rem;
+}
+
+.window.b0 {
+  bottom: -0.25rem;
+}
+
+.window.l0 {
+  left: -0.25rem;
+}
+
+.window.r0 {
+  right: -0.25rem;
+}
+
+.window.no-b-offset {
+  bottom: 0;
+}
+
+.window.no-l-offset {
+  left: 0;
+}
+
+.window.no-r-offset {
+  right: 0;
+}
+
+.window.no-t-offset {
+  top: 0;
+}
+
+/**
+ * Position
+ */
+.pr {
+  position: relative;
+}
+
+.t0 {
+  top: 0;
+}
+
+.t-1px {
+  top: -1px;
+}
+
+.t3in {
+  top: 0.25rem;
+}
+
+.t6in {
+  top: 0.5rem;
+}
+
+.t1ft {
+  top: 1rem;
+}
+
+.t1ft6in {
+  top: 1.5rem;
+}
+
+.t2ft {
+  top: 2rem;
+}
+
+.t3ft {
+  top: 3rem;
+}
+
+.t3ft6in {
+  top: 3.5rem;
+}
+
+.t4ft {
+  top: 4rem;
+}
+
+.t5ft {
+  top: 5rem;
+}
+
+.t5ft6in {
+  top: 5.5rem;
+}
+
+.t6ft {
+  top: 6rem;
+}
+
+.t7ft {
+  top: 7rem;
+}
+
+.t7ft3in {
+  top: 7.25rem;
+}
+
+.t8ft {
+  top: 8rem;
+}
+
+.t9ft {
+  top: 9rem;
+}
+
+.t10ft {
+  top: 10rem;
+}
+
+.t10ft9in {
+  top: 10.75rem;
+}
+
+.t11ft {
+  top: 11rem;
+}
+
+.t11ft3in {
+  top: 11.25rem;
+}
+
+.t12ft {
+  top: 12rem;
+}
+
+.t13ft {
+  top: 13rem;
+}
+
+.r0 {
+  right: 0;
+}
+
+.r2ft {
+  right: 2rem;
+}
+
+.r3ft {
+  right: 3rem;
+}
+
+.r6ft {
+  right: 6rem;
+}
+
+.r7ft {
+  right: 7rem;
+}
+
+.r7ft3in {
+  right: 7.25rem;
+}
+
+.r9ft {
+  right: 9rem;
+}
+
+.r10ft {
+  right: 10rem;
+}
+
+.r13ft {
+  right: 13rem;
+}
+
+.r16ft {
+  right: 16rem;
+}
+
+.r19ft {
+  right: 19rem;
+}
+
+.r25ft {
+  right: 25rem;
+}
+
+.b0 {
+  bottom: 0;
+}
+
+.b2ft {
+  bottom: 2rem;
+}
+
+.b3in {
+  bottom: 0.25rem;
+}
+
+.b3ft {
+  bottom: 3rem;
+}
+
+.b4ft {
+  bottom: 4rem;
+}
+
+.b5ft {
+  bottom: 5rem;
+}
+
+.b6ft {
+  bottom: 6rem;
+}
+
+.b6ft6in {
+  bottom: 6.5rem;
+}
+
+.b7ft {
+  bottom: 7rem;
+}
+
+.b9ft {
+  bottom: 9rem;
+}
+
+.b10ft {
+  bottom: 10rem;
+}
+
+.lcenter {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.l0 {
+  left: 0;
+}
+
+.l1px {
+  left: 1px;
+}
+
+.l3in {
+  left: 0.25rem;
+}
+
+.l6in {
+  left: 0.5rem;
+}
+
+.l1ft {
+  left: 1rem;
+}
+
+.l2ft {
+  left: 2rem;
+}
+
+.l2ft3in {
+  left: 2.25rem;
+}
+
+.l3ft {
+  left: 3rem;
+}
+
+.l4ft {
+  left: 4rem;
+}
+
+.l5ft {
+  left: 5rem;
+}
+
+.l6ft {
+  left: 6rem;
+}
+
+.l7ft {
+  left: 7rem;
+}
+
+.l7ft6in {
+  left: 7.5rem;
+}
+
+.l9ft {
+  left: 9rem;
+}
+
+.l10ft {
+  left: 10rem;
+}
+
+.l11ft {
+  left: 11rem;
+}
+
+.l13ft {
+  left: 13rem;
+}
+
+.l14ft {
+  left: 14rem;
+}
+
+.l16ft {
+  left: 16rem;
+}
+
+.l17ft {
+  left: 17rem;
+}
+
+.l20ft {
+  left: 20rem;
+}
+
+.l23ft {
+  left: 23rem;
+}
+
+/**
+ * Rotations
+ */
+
+.r-90deg {
+  transform: rotateZ(-90deg);
+}
+
+.r90deg {
+  transform: rotateZ(90deg);
+}
+
+.r180deg {
+  transform: rotateZ(180deg);
+}
+
+.r270deg {
+  transform: rotateZ(270deg);
+}
+
+.flipX {
+  transform: scaleX(-1);
+}
+
+.flipY {
+  transform: scaleY(-1);
+}
+
+.flipX.r270deg {
+  transform: rotateZ(270deg) scaleX(-1);
+}
+
+.flipY.r270deg {
+  transform: rotateZ(270deg) scaleY(-1);
+}
+
+/**
+ * Dimenions
+ */
+
+.w1\.5in {
+  width: 0.125rem;
+}
+
+.w3in {
+  width: 0.25rem;
+}
+
+.w1ft {
+  width: 1rem;
+}
+
+.w1ft3in {
+  width: 1.25rem;
+}
+
+.w2ft {
+  width: 2rem;
+}
+
+.w2ft3in {
+  width: 2.25rem;
+}
+
+.w3ft {
+  width: 3rem;
+}
+
+.w3ft3in {
+  width: 3.25rem;
+}
+
+.w4ft {
+  width: 4rem;
+}
+
+.w6ft {
+  width: 6rem;
+}
+
+.w7ft {
+  width: 7rem;
+}
+
+.w9ft {
+  width: 9rem;
+}
+
+.w9ft3in {
+  width: 9.25rem;
+}
+
+.w10ft {
+  width: 10rem;
+}
+
+.w10ft3in {
+  width: 10.25rem;
+}
+
+.w12ft {
+  width: 12rem;
+}
+
+.w12ft3in {
+  width: 12.25rem;
+}
+
+.w13ft {
+  width: 13rem;
+}
+
+.w100\% {
+  width: 100%;
+}
+
+.h1\.5in {
+  height: 0.125rem;
+}
+
+.h3in {
+  height: 0.25rem;
+}
+
+.h1ft6in {
+  height: 1.5rem;
+}
+
+.h2ft {
+  height: 2rem;
+}
+
+.h2ft3in {
+  height: 2.25rem;
+}
+
+.h3ft {
+  height: 3rem;
+}
+
+.h3ft3in {
+  height: 3.25rem;
+}
+
+.h3ft6in {
+  height: 3.5rem;
+}
+
+.h4ft {
+  height: 4rem;
+}
+
+.h4ft6in {
+  height: 4.5rem;
+}
+
+.h5ft {
+  height: 5rem;
+}
+
+.h6ft {
+  height: 6rem;
+}
+
+.h6ft3in {
+  height: 6.25rem;
+}
+
+.h6ft9in {
+  height: 6.75rem;
+}
+
+.h7ft {
+  height: 7rem;
+}
+
+.h7ft3in {
+  height: 7.25rem;
+}
+
+.h7ft6in {
+  height: 7.5rem;
+}
+
+.h8ft {
+  height: 8rem;
+}
+
+.h9ft {
+  height: 9rem;
+}
+
+.h9ft3in {
+  height: 9.25rem;
+}
+
+.h10ft {
+  height: 10rem;
+}
+
+.h10ft3in {
+  height: 10.25rem;
+}
+
+.h11ft {
+  height: 11rem;
+}
+
+.h12ft {
+  height: 12rem;
+}
+
+.h100\% {
+  height: 100%;
+}
+
+/**
+ * Floor Plans
+ */
+
+.container {
+  width: 43rem;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+.container__overflow {
+  overflow-x: auto;
+}
+
+.floor-plan {
+  position: relative;
+  width: 41rem;
+  height: 27rem;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+.floor-plan .room--kitchen {
+  top: 0;
+  left: 11rem;
+  width: calc(16.25rem + 0.5rem);
+}
+
+.floor-plan .room--office {
+  top: 13rem;
+  left: 0;
+}
+
+.floor-plan .room--utility {
+  top: 20rem;
+  left: 11rem;
+}
+
+.floor-plan .room--powder {
+  top: 20rem;
+  left: 16rem;
+}
+
+.floor-plan .room--closet {
+  top: 20rem;
+  left: 23rem;
+}
+
+.floor-plan .room--porch {
+  top: 20rem;
+  left: 27rem;
+}
+
+.floor-plan .room--stairs {
+  top: 13rem;
+  left: 13.25rem;
+  z-index: 20;
+  height: calc(2.75rem + 0.5rem);
+  background-color: #e8e8e8;
+}
+
+.floor-plan .room--living {
+  top: 0;
+  left: 27.5rem;
+}
+
+.floor-plan .room--master-bed {
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+
+.floor-plan .room--master-closet {
+  top: 0;
+  left: 12rem;
+}
+
+.floor-plan .room--master-bath {
+  top: 16rem;
+  left: 0;
+}
+
+.floor-plan .room--laundry {
+  top: 19rem;
+  left: 12rem;
+}
+
+.floor-plan .room--bathroom {
+  top: 16rem;
+  left: 19.25rem;
+}
+
+.floor-plan .room--living-modified {
+  height: calc(19.75rem + 0.5rem);
+}
+
+.floor-plan .room--opening {
+  top: 10.15rem;
+  left: 13.5rem;
+  width: calc(13.75rem + 0.5rem);
+  height: calc(2.75rem + 0.5rem);
+}
+
+.floor-plan .room--opening-above {
+  left: 13.25rem;
+  width: calc(14rem + 0.5rem);
+  background-color: #e8e8e8;
+}
+
+.floor-plan .room--opening-above .wall {
+  background-color: #999;
+}
+
+.floor-plan .room--opening-above .label {
+  color: #999;
+}
+
+.floor-plan .room--bedroom-1 {
+  top: 0;
+  left: 28.5rem;
+}
+
+.floor-plan .room--bedroom-2 {
+  top: 13rem;
+  left: 27.5rem;
+}
+
+.floor-plan .room--sitting-area {
+  top: 0;
+  left: 18rem;
+}
+
+.room__buffer::before,
+.room__buffer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e8e8e8;
+  opacity: 0.1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.room__buffer::before {
+  background-image: repeating-linear-gradient(90deg, #000, #000 1px, transparent 1px, transparent 1rem);
+}
+
+.room__buffer::after {
+  background-image: repeating-linear-gradient(0deg, #000, #000 1px, transparent 1px, transparent 1rem);
+}
+
+.room__buffer--no-grid::before,
+.room__buffer--no-grid::after {
+  opacity: 0;
+}
+
+/**
+ * Exterior
+ */
+
+.exterior {
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 1);
+}
+
+.exterior .window {
+  background-color: transparent;
+}
+
+.exterior .window::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: block;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px solid;
+}
+
+.exterior--front,
+.exterior--back {
+  width: 40rem;
+  height: 28rem;
+}
+
+.exterior--right,
+.exterior--left {
+  width: 26rem;
+  height: 28rem;
+  margin: 0 auto;
+}
