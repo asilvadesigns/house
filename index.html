@@ -26,8 +26,9 @@
       <header class="core__sidebar__header">
         <nav class="nav nav--stacked nav--numbered">
           <h3 class="nav__item">Intro</h3>
-          <button class="nav__item nav__item--nested [ nav__link ] active" data-toggle="nav" data-target="nav_hello">Hello</button>
+          <button class="nav__item nav__item--nested [ nav__link ]" data-toggle="nav" data-target="nav_hello">Hello</button>
           <button class="nav__item nav__item--nested [ nav__link ]" data-toggle="nav" data-target="nav_inspiration">Inspiration</button>
+          <button class="nav__item nav__item--nested [ nav__link ] active" data-toggle="nav" data-target="nav_materials">Materials</button>
           <hr class="nav__item nav__divider">
           <h3 class="nav__item">Interior</h3>
           <button class="nav__item nav__item--nested [ nav__link ]" data-toggle="nav" data-target="nav_downstairs">Downstairs</button>
@@ -66,15 +67,34 @@
             <div class="menu__line"></div>
           </div>
         </button>
+        <button class="menu menu--increase-scale" data-increase="floorplan-scale" title="increase floor plan scale">
+          <div class="menu__buffer">
+            <div class="menu__line"></div>
+            <div class="menu__line"></div>
+          </div>
+        </button>
+        <button class="menu menu--decrease-scale" data-decrease="floorplan-scale" title="decrease floor plan scale">
+          <div class="menu__buffer">
+            <div class="menu__line"></div>
+          </div>
+        </button>
+        <button class="menu menu--reset-scale" data-reset="floorplan-scale" title="reset floor plan scale">
+          <div class="menu__buffer">
+            <div class="menu__line"></div>
+            <div class="menu__line"></div>
+          </div>
+        </button>
       </nav>
       <div class="nav__content">
-        <div id="nav_hello" class="nav__pane active">
+        <div id="nav_hello" class="nav__pane">
           <section class="container">
             <div style="max-width: 30em; margin: 0 auto;">
               <h3 class="title">Hellos</h3>
-              <h5 class="subtitle">_</h5>
-              <p>This little website serves as a central information hub for Alberto and Bethany's future home(Lord willing). Those buttons up top do stuff, you should click them.</p>
-              <p>Ideally, you would progress through the links in the sidebar top to bottom, but... no one cares. Also, this site works on your phone, try it. That's all for now, enjoy, have a nice day!</p>
+              <h5 class="subtitle">-</h5>
+              <p>This little website serves as a central information hub for Alberto and Bethany's future home(Lord willing).
+                Those buttons up top do stuff, you should click them.</p>
+              <p>Ideally, you would progress through the links in the sidebar top to bottom, but... no one cares. Also, this
+                site works on your phone, try it. That's all for now, enjoy, have a nice day!</p>
             </div>
           </section>
         </div>
@@ -82,586 +102,118 @@
           <section class="container">
             <div style="max-width: 30em; margin: 0 auto;">
               <h3 class="title">Inspiration</h3>
-              <h5 class="subtitle">_</h5>
+              <h5 class="subtitle">-</h5>
               <p>The following is a collection of items that helped solidify our vision.</p>
               <div class="panel">
-                <h3 class="panel__title">Exterior: color, windows, roof.</h3>
+                <h3 class="panel__title panel__title--we-liked">Exterior: color, windows, roof.</h3>
                 <div class="panel__img img" style="background-image: url('img/insitustudio-inspiration-01.jpg');"></div>
                 <a class="panel__link" href="http://www.insitustudio.us/farmhouse/" target="_blank">http://www.insitustudio.us/farmhouse/</a>
               </div>
               <div class="panel">
-                <h3 class="panel__title">Interior: color, loft, stairs, window trim, skylight.</h3>
+                <h3 class="panel__title panel__title--we-liked">Interior: color, loft, stairs, window trim, skylight.</h3>
                 <div class="panel__img img" style="background-image: url('img/gardnerarchitectsllc-inspiration-02.jpg');"></div>
                 <a class="panel__link" href="http://www.gardnerarchitectsllc.com/saltbox" target="_blank">http://www.gardnerarchitectsllc.com/saltbox</a>
               </div>
               <div class="panel">
-                <h3 class="panel__title">Interior: color, cabinets, backsplash, floor.</h3>
+                <h3 class="panel__title panel__title--we-liked">Interior: color, cabinets, backsplash, floor.</h3>
                 <div class="panel__img img" style="background-image: url('img/studioforny-inspiration-03.jpg');"></div>
                 <a class="panel__link" href="https://www.studioforny.com/fallkill-farm" target="_blank">https://www.studioforny.com/fallkill-farm</a>
               </div>
             </div>
           </section>
         </div>
-        <div id="nav_downstairs" class="nav__pane">
+        <div id="nav_materials" class="nav__pane active">
           <section class="container">
-            <h3 class="title">Downstairs</h3>
-            <h5 class="subtitle">Top Down View</h5>
-            <div class="container__overflow">
-              <div class="floor-plan">
-                <button class="room room--dining">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <!-- <div class="room__item wall b0 l0 w9ft3in h3in"></div> -->
-                  <!-- <div class="room__item wall t0 r0 w3in h9ft3in"></div> -->
-                  <div class="room__buffer">
-                    <div class="room__label label">Dining</div>
-                    <div class="room__item window t0 l3ft w3ft h3in"></div>
-                    <div class="room__item window t3ft l0 w3in h3ft"></div>
-                    <div class="room__item window t6ft l0 w3in h3ft"></div>
-                    <div class="room__item door door--left b3in l0"></div>
-                  </div>
-                </button>
-                <button class="room room--kitchen">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h9ft3in"></div>
-                  <!-- <div class="room__item wall b0 l0 w100% h3in"></div> -->
-                  <div class="room__item wall t0 r0 w3in h2ft3in"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Kitchen</div>
-                    <div class="room__item cabinets t0 l4ft w12ft3in h2ft"></div>
-                    <div class="room__item cabinets t4ft l0 w2ft h5ft"></div>
-                    <div class="room__item cabinets cabinets--pantry t0 l0 w4ft h4ft">
-                      <div class="pantry b0 r0 w3ft h3ft">
-                        <div class="room__item door door--left door--sm flipX t6in l0"></div>
-                      </div>
-                    </div>
-                    <div class="room__item sink t0 w3ft h2ft">
-                      <div class="sink__bowl"></div>
-                    </div>
-                    <div class="room__item island t5ft6in l6ft w6ft h3ft6in">
-                      <div class="room__item stove t0 lcenter">
-                        <div class="stove__burner t0 l0"></div>
-                        <div class="stove__burner t0 r0"></div>
-                        <div class="stove__burner b0 l0"></div>
-                        <div class="stove__burner b0 r0"></div>
-                      </div>
-                    </div>
-                    <div class="room__item fridge fridge--opens-right t6ft l0 w2ft3in h3ft">
-                      <div class="label">FR</div>
-                    </div>
-                    <div class="room__item dishwasher dishwasher--opens-down t0 r2ft w3ft h2ft3in">
-                      <div class="label">DW</div>
-                    </div>
-                    <div class="room__item window t0 l6ft w3ft h3in"></div>
-                    <div class="room__item window t0 l9ft w3ft h3in"></div>
-                  </div>
-                </button>
-                <button class="room room--opening room--opening-above">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Open Above</div>
-                  </div>
-                </button>
-                <button class="room room--stairs">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall b0 r0 w3in h100%"></div> -->
-                  <div class="room__buffer">
-                    <div class="room__label label">Upstairs</div>
-                    <div class="room__item steps steps--going-up"></div>
-                  </div>
-                </button>
-                <button class="room room--office">
-                  <div class="room__item wall t0 l0 w9ft3in h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 r2ft w3in h7ft3in"></div>
-                  <div class="room__item wall t7ft r0 w2ft3in h3in"></div>
-                  <div class="room__item wall t7ft r0 w3in h6ft3in"></div>
-                  <div class="room__buffer">
-                    <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
-                    <div class="room__item window b0 l3ft w3ft h3in"></div>
-                    <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
-                    <!-- <div class="room__item window b3ft l0 w3in h3ft"></div> -->
-                    <!-- <div class="room__item window b6ft l0 w3in h3ft"></div> -->
-                    <div class="room__item door door--left t0 r2ft r180deg"></div>
-                    <div class="room__item closet closet--open-left b0 r0 w2ft h6ft"></div>
-                    <div class="label">Office</div>
-                  </div>
-                </button>
-                <button class="room room--utility">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Utility</div>
-                    <div class="room__item closet closet--open-right t0 l0 w1ft h7ft"></div>
-                    <div class="room__item door door--left t0 r0 r270deg flipX"></div>
-                  </div>
-                </button>
-                <button class="room room--powder">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Powder</div>
-                    <div class="room__item window b0 lcenter w3ft h3in"></div>
-                    <div class="room__item door door--left t0 r0 r270deg flipX"></div>
-                  </div>
-                </button>
-                <button class="room room--closet">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Closet</div>
-                    <div class="room__item closet closet--open-top b0 l0 w100% h2ft"></div>
-                    <div class="room__item door door--left t0 r0 r270deg flipX"></div>
-                  </div>
-                </button>
-                <button class="room room--porch">
-                  <!-- <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div> -->
-                  <div class="room__buffer room__buffer--no-grid">
-                    <div class="room__label label">Porch</div>
-                    <!-- <div class="room__item door door--left t0 l0 r90deg"></div> -->
-                  </div>
-                </button>
-                <button class="room room--living room--living-modified" data-toggle="tab" data-target="tab_living">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
-                  <div class="room__item wall b0 r0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Living</div>
-                    <div class="room__item door door--left door--sm t0 l0ft r90deg"></div>
-                    <div class="room__item door door--left door--sm t0 l2ft flipX r270deg"></div>
-                    <div class="room__item window t0 r0 w3ft h3in no-r-offset"></div>
-                    <div class="room__item window t0 r3ft w3ft h3in"></div>
-                    <div class="room__item window t0 r6ft w3ft h3in"></div>
-                    <div class="room__item window t0 r0 w3in h3ft no-t-offset"></div>
-                    <div class="room__item window t3ft r0 w3in h3ft"></div>
-                    <div class="room__item window t6ft r0 w3in h3ft"></div>
-                    <div class="room__item window b0 r0 w3in h3ft no-b-offset"></div>
-                    <div class="room__item window b0 r0 w3ft h3in no-r-offset"></div>
-                    <div class="room__item window b0 r3ft w3ft h3in"></div>
-                    <div class="room__item window b0 r6ft w3ft h3in"></div>
-                    <div class="room__item door door--left b0 l3in flipY r270deg"></div>
-                  </div>
-                </button>
-              </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some downstairs notes here...</p>
-          </section>
-        </div>
-        <div id="nav_upstairs" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Upstairs</h3>
-            <h5 class="subtitle">Top Down View</h5>
-            <div class="container__overflow">
-              <div class="floor-plan">
-                <button class="room room--master-bed">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <!-- <div class="room__item wall b0 l0 w10ft3in h3in"></div> -->
-                  <!-- <div class="room__item wall t0 r0 w3in h7ft3in"></div> -->
-                  <div class="room__item wall b9ft r0 w3ft h3in"></div>
-                  <div class="room__item wall b0 r3ft w3in h9ft3in"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Master Bed</div>
-                    <div class="room__item window t0 l3ft w3ft h3in"></div>
-                    <div class="room__item window t0 l6ft w3ft h3in"></div>
-                    <div class="room__item window t3ft l0 w3in h3ft"></div>
-                    <div class="room__item window t6ft l0 w3in h3ft"></div>
-                    <div class="room__item door door--left t10ft9in l7ft6in r180deg"></div>
-                    <div class="room__item door door--left b3in l7ft6in flipX"></div>
-                    <!-- <div class="room__item door door--left b0 l0"></div> -->
-                  </div>
-                </button>
-                <button class="room room--master-closet">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Master Closet</div>
-                    <div class="room__item closet closet--open-left t0 r0 w2ft h7ft"></div>
-                    <div class="room__item door door--left door--sm t1ft6in l0 flipY"></div>
-                    <div class="room__item door door--left door--sm t3ft6in l0"></div>
-                  </div>
-                </button>
-                <button class="room room--master-bath">
-                  <div class="room__item wall t0 l0 w10ft3in h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 r0 w3in h100%"></div> -->
-                  <div class="room__item wall t0 r2ft w3in h3ft"></div>
-                  <div class="room__item wall t3ft r0 w2ft3in h3in"></div>
-                  <!-- <div class="room__item wall t3ft r0 w3in h7ft3in"></div> -->
-                  <div class="room__buffer">
-                    <div class="room__label label">Master Bath</div>
-                    <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
-                    <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
-                    <div class="room__item window b0 l3ft w3ft h3in"></div>
-                    <div class="room__item door door--left door--sm t0 l3ft r90deg"></div>
-                    <div class="room__item door door--left door--sm t0 l5ft flipX r270deg"></div>
-                  </div>
-                </button>
-                <button class="room room--laundry">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Laundry</div>
-                    <div class="room__item closet closet--open-right t0 l0 w2ft h100%"></div>
-                    <div class="room__item closet closet--open-left t0 r0 w2ft h100%"></div>
-                    <div class="room__item window b0 lcenter w3ft h3in"></div>
-                    <div class="room__item door door--left t0 l2ft3in r270deg flipX"></div>
-                  </div>
-                </button>
-                <button class="room room--bathroom">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Bathroom</div>
-                    <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
-                    <div class="room__item door door--left t0 l0 flipY"></div>
-                  </div>
-                </button>
-                <button class="room room--stairs">
-                  <div class="room__item wall t0 l3in w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in"></div>
-                  <div class="room__item wall b0 l3in w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Downstairs</div>
-                    <div class="room__item steps steps--going-down"></div>
-                  </div>
-                </button>
-                <button class="room room--opening">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="label">Open Below</div>
-                  </div>
-                </button>
-                <button class="room room--bedroom-1">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h7ft3in"></div>
-                  <div class="room__item wall t7ft3in l0 w2ft3in h3in"></div>
-                  <div class="room__item wall t7ft3in l2ft w3in h6ft3in"></div>
-                  <div class="room__item wall b0 r0 w10ft3in h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Bedroom 1</div>
-                    <div class="room__item closet closet--open-right t0 l0 w2ft h7ft"></div>
-                    <div class="room__item window t0 r3ft w3ft h3in"></div>
-                    <div class="room__item window t0 r6ft w3ft h3in"></div>
-                    <div class="room__item window t3ft r0 w3in h3ft"></div>
-                    <div class="room__item window t6ft r0 w3in h3ft"></div>
-                    <div class="room__item door door--left b0 l2ft"></div>
-                  </div>
-                </button>
-                <button class="room room--bedroom-2">
-                  <!-- <div class="room__item wall t0 l3ft w10ft3in h3in"></div> -->
-                  <div class="room__item wall t0 l3ft w3in h3ft3in"></div>
-                  <div class="room__item wall t3in l6ft w3in h2ft"></div>
-                  <div class="room__item wall t2ft l3ft w3ft h3in"></div>
-                  <div class="room__item wall t3ft l0 w3ft h3in"></div>
-                  <div class="room__item wall t3ft l0 w3in h10ft3in"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Bedroom 2</div>
-                    <div class="room__item closet closet--open-bottom t0 l6ft w7ft h2ft"></div>
-                    <div class="room__item door door--left door--xs t3in l3ft flipY"></div>
-                    <div class="room__item door door--left t3ft l0 r90deg"></div>
-                    <div class="room__item window b0 r3ft w3ft h3in"></div>
-                    <div class="room__item window b0 r6ft w3ft h3in"></div>
-                    <!-- <div class="room__item window b3ft r0 w3in h3ft"></div> -->
-                    <div class="room__item window b6ft r0 w3in h3ft"></div>
-                  </div>
-                </button>
-                <button class="room room--sitting-area">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
-                  <div class="room__item wall b0 r0 w1ft3in h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="room__label label">Sitting Area</div>
-                    <div class="room__item closet closet--open-left t0 r0 w1ft h7ft"></div>
-                    <div class="room__item window t0 l2ft w3ft h3in"></div>
-                  </div>
-                </button>
-              </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some upstairs notes here...</p>
-          </section>
-        </div>
-        <div id="nav_basement" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Basement</h3>
-            <h5 class="subtitle">Top Down View</h5>
-            <div class="container__overflow">
-              <div class="floor-plan">
-                <button class="room room--basement">
-                  <div class="room__item wall t0 l0 w100% h3in"></div>
-                  <div class="room__item wall t0 l0 w3in h100%"></div>
-                  <div class="room__item wall b0 l0 w100% h3in"></div>
-                  <div class="room__item wall b0 r0 w3in h100%"></div>
-                  <div class="room__buffer">
-                    <div class="label">Not sure if we can do this yet?</div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div id="nav_front" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Front</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <div class="exterior exterior--front">
-                <div class="room room--flush t0 l0 w100% h100%">
-                  <div class="room__buffer">
-                    <div class="room__item roof roof--front t0 l0 w100% h10ft"></div>
-
-                    <div class="room__item window b3ft l0 w3ft h5ft no-l-offset"></div>
-                    <div class="room__item window b3ft l3ft w3ft h5ft"></div>
-
-                    <div class="room__item window b5ft r19ft w3ft h3ft"></div>
-
-                    <div class="room__item window window--skylight t3ft l3ft w3ft h4ft"></div>
-
-                    <div class="room__item window t11ft l0 w3ft h1ft6in no-l-offset"></div>
-                    <div class="room__item window t11ft l3ft w3ft h1ft6in"></div>
-
-                    <div class="room__item window t11ft r19ft w3ft h3ft"></div>
-                    <div class="room__item window t11ft r25ft w3ft h3ft"></div>
-
-                    <div class="room__item window t11ft r3ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft r6ft w3ft h4ft"></div>
-
-                    <div class="room__item area area--porch b0 r0 w13ft h8ft"></div>
-                    <div class="room__item window b0 r9ft w3ft h6ft9in">
-                      <div class="room__item window__door"></div>
-                    </div>
-                    <div class="room__item window b6ft6in r9ft w3ft h1ft6in"></div>
-                    <div class="room__item window b6ft6in r6ft w3ft h1ft6in"></div>
-                    <div class="room__item window b6ft6in r3ft w3ft h1ft6in"></div>
-                    <div class="room__item window b6ft6in r0 w3ft h1ft6in no-r-offset"></div>
-                    <!-- <div class="label"></div> -->
-                  </div>
+            <div style="max-width: 30em; margin: 0 auto;">
+              <h3 class="title">Materials</h3>
+              <h5 class="subtitle">-</h5>
+              <p>Some materials/colors per room/area that we like.</p>
+              <div class="panel">
+                <h3 class="panel__title">Kitchen</h3>
+                <h5 class="subtitle">-</h5>
+                <div class="panel__body">
+                  <h3>Cabinets</h3>
+                  <ul>
+                    <li>White up top, Robin Egg Blue bottom.</li>
+                    <li>Shaker style.</li>
+                  </ul>
+                  <h3>Walls</h3>
+                  <ul>
+                    <li>White.</li>
+                  </ul>
+                  <h3>Moulding</h3>
+                  <ul>
+                    <li>Minimal trim on floor and around door.</li>
+                  </ul>
+                  <h3>Floor</h3>
+                  <ul>
+                    <li>Wood floor color, no idea what that is... pine?</li>
+                  </ul>
                 </div>
+                <div class="houzz__img"><a href='https://www.houzz.com/photo/1135203-springdale-farmhouse-kitchen-farmhouse-kitchen-austin'
+                    target='_blank'><img src='https://st.hzcdn.com/simgs/cdf1674f0febe50b_8-0812/farmhouse-kitchen.jpg' alt=''
+                      border=0 width='500' height='334' nopin='nopin' ondragstart='return false;' onselectstart='return false;'
+                      oncontextmenu='return false;' /></a></div>
+                <div style='color:#444;'><small><a style="text-decoration:none;color:#444;" href="https://www.houzz.com/pro/mattrisinger/risinger-homes"
+                      target="_blank">Photo by Risinger Homes</a> - <a style="text-decoration:none;color:#444;" href="https://www.houzz.com/photos/kitchen"
+                      target="_blank">Discover kitchen design inspiration</a></small></div>
               </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some front notes here...</p>
-          </section>
-        </div>
-        <div id="nav_right" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Right</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <div class="exterior exterior--right">
-                <div class="room room--flush t0 l0 w100% h100%">
-                  <div class="room__buffer">
-                    <div class="room__item roof roof--right">
-                      <div class="roof__buffer"></div>
-                    </div>
-
-                    <div class="room__item area area--porch b0 l0 w6ft h8ft"></div>
-                    <div class="room__item window b6ft6in l6ft w3ft h1ft6in"></div>
-                    <div class="room__item window b3ft r0 w3ft h5ft no-r-offset"></div>
-                    <div class="room__item window b3ft r3ft w3ft h5ft"></div>
-                    <div class="room__item window b3ft r6ft w3ft h5ft"></div>
-
-                    <div class="room__item window t11ft l6ft w3ft h3ft"></div>
-
-                    <div class="room__item window t11ft r3ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft r6ft w3ft h4ft"></div>
-                  </div>
+              <div class="panel">
+                <h3 class="panel__title">Exterior</h3>
+                <h5 class="subtitle">-</h5>
+                <div class="panel__body">
+                  <h3>Roof</h3>
+                  <ul>
+                    <li>Galvalume Metal.. so fresh.</li>
+                  </ul>
+                  <h3>Windows</h3>
+                  <ul>
+                    <li>Industrial modern, black or charcoal?</li>
+                  </ul>
+                  <h3>Siding</h3>
+                  <ul>
+                    <li>Hardie Plank smooth white.</li>
+                  </ul>
                 </div>
-              </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some right notes here...</p>
-          </section>
-        </div>
-        <div id="nav_back" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Back</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <div class="exterior exterior--back">
-                <div class="room room--flush t0 l0 w100% h100%">
-                  <div class="room__buffer">
-                    <div class="room__item roof roof--back t0 l0 w100% h10ft"></div>
-
-                    <div class="room__item window b3ft l0ft w3ft h5ft"></div>
-                    <div class="room__item window b3ft l3ft w3ft h5ft"></div>
-                    <div class="room__item window b3ft l6ft w3ft h5ft"></div>
-                    <div class="room__item window b6ft6in l9ft w4ft h1ft6in"></div>
-                    <div class="room__item window b0 l9ft w2ft h6ft9in">
-                      <div class="room__item window__door window__door--flush-right"></div>
-                    </div>
-                    <div class="room__item window b0 l11ft w2ft h6ft9in">
-                      <div class="room__item window__door window__door--flush-left"></div>
-                    </div>
-
-                    <div class="room__item window b5ft l17ft w3ft h3ft"></div>
-                    <div class="room__item window b5ft l20ft w3ft h3ft"></div>
-
-                    <div class="room__item window b5ft r3ft w3ft h3ft"></div>
-                    <!-- TODO: use another window in the kitchen? -->
-                    <!-- <div class="room__item window b5ft r6ft w3ft h3ft"></div> -->
-
-                    <div class="room__item window t11ft l3ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft l6ft w3ft h4ft"></div>
-
-                    <div class="room__item window t11ft l17ft w3ft h3ft"></div>
-
-                    <div class="room__item window t11ft r3ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft r6ft w3ft h4ft"></div>
-
-                    <div class="room__item window window--skylight t1ft6in l17ft w3ft h4ft"></div>
-                    <div class="room__item window window--skylight t1ft6in l20ft w3ft h4ft"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some back notes here...</p>
-          </section>
-        </div>
-        <div id="nav_left" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Left</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <div class="exterior exterior--left">
-                <div class="room room--flush t0 l0 w100% h100%">
-                  <div class="room__buffer">
-                    <div class="room__item roof roof--left">
-                      <div class="roof__buffer"></div>
-                    </div>
-
-                    <div class="room__item window t11ft l3ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft l6ft w3ft h4ft"></div>
-                    <div class="room__item window t11ft r0ft w3ft h1ft6in no-r-offset"></div>
-                    <!-- <div class="room__item window t11ft r3ft w3ft h1ft6in"></div> -->
-
-                    <div class="room__item window b3ft l3ft w3ft h5ft"></div>
-                    <div class="room__item window b3ft l6ft w3ft h5ft"></div>
-
-                    <div class="room__item window b3ft r0 w3ft h5ft no-r-offset"></div>
-                    <!-- <div class="room__item window b5ft r3ft w3ft h3ft"></div> -->
-                    <!-- <div class="room__item window b3ft r6ft w3ft h5ft"></div> -->
-
-                    <div class="room__item window b6ft6in l9ft w3ft h1ft6in"></div>
-                    <div class="room__item window b0 l9ft w3ft h6ft9in">
-                      <div class="room__item window__door"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h3 class="title">Notes</h3>
-            <h5 class="subtitle">_</h5>
-            <p>some left notes here...</p>
-          </section>
-        </div>
-        <div id="nav_elements" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Elements</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <h3 class="title">Bathtub</h3>
-              <h5 class="subtitle">_</h5>
-              <div class="bathtub bathtub--vertical">
-                <div class="bathtub__tub"></div>
-              </div>
-              <hr>
-              <div class="bathtub bathtub--horizontal">
-                <div class="bathtub__tub"></div>
-              </div>
-              <h3 class="title">Toilets</h3>
-              <h5 class="subtitle">_</h5>
-              <div class="toilet toilet--vertical">
-                <div class="toilet__item toilet__bowl"></div>
-                <div class="toilet__item toilet__tank"></div>
-              </div>
-              <hr>
-              <div class="toilet toilet--vertical toilet--flipped">
-                <div class="toilet__item toilet__bowl"></div>
-                <div class="toilet__item toilet__tank"></div>
-              </div>
-              <hr>
-              <div class="toilet toilet--horizontal">
-                <div class="toilet__item toilet__bowl"></div>
-                <div class="toilet__item toilet__tank"></div>
-              </div>
-              <hr>
-              <div class="toilet toilet--horizontal toilet--flipped">
-                <div class="toilet__item toilet__bowl"></div>
-                <div class="toilet__item toilet__tank"></div>
+                <div class="houzz__img"><a href='https://www.houzz.com/photo/1135202-springdale-farmhouse-porch-farmhouse-exterior-austin'
+                    target='_blank'><img src='https://st.hzcdn.com/simgs/5451e1ba0febe507_8-3464/farmhouse-exterior.jpg' alt=''
+                      border=0 width='500' height='360' nopin='nopin' ondragstart='return false;' onselectstart='return false;'
+                      oncontextmenu='return false;' /></a></div>
+                <div style='color:#444;'><small><a style="text-decoration:none;color:#444;" href="https://www.houzz.com/pro/mattrisinger/risinger-homes"
+                      target="_blank">Photo by Risinger Homes</a> - <a style="text-decoration:none;color:#444;" href="https://www.houzz.com/photos/exterior"
+                      target="_blank">Browse exterior home photos</a></small></div>
               </div>
             </div>
           </section>
         </div>
-        <div id="nav_rooms" class="nav__pane">
-          <section class="container">
-            <h3 class="title">Rooms</h3>
-            <h5 class="subtitle">_</h5>
-            <div class="container__overflow">
-              <h3 class="title">Dining</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--dining pr">
+      </div>
+      <div id="nav_downstairs" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Downstairs</h3>
+          <h5 class="subtitle">Top Down View</h5>
+          <div class="container__overflow">
+            <div class="floor-plan [ will-scale ]">
+              <button class="room room--dining">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
-                <div class="room__item wall b0 l0 w9ft3in h3in"></div>
-                <div class="room__item wall t0 r0 w3in h9ft3in"></div>
+                <!-- <div class="room__item wall b0 l0 w9ft3in h3in"></div> -->
+                <!-- <div class="room__item wall t0 r0 w3in h9ft3in"></div> -->
                 <div class="room__buffer">
+                  <div class="room__label label">Dining</div>
                   <div class="room__item window t0 l3ft w3ft h3in"></div>
                   <div class="room__item window t3ft l0 w3in h3ft"></div>
                   <div class="room__item window t6ft l0 w3in h3ft"></div>
-                  <div class="room__item door door--left b0 l0"></div>
+                  <div class="room__item door door--left b3in l0"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Kitchen</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--kitchen pr">
+              <button class="room room--kitchen">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h9ft3in"></div>
                 <!-- <div class="room__item wall b0 l0 w100% h3in"></div> -->
                 <div class="room__item wall t0 r0 w3in h2ft3in"></div>
                 <div class="room__buffer">
-                  <div class="room__item cabinets t0 l4ft w12ft h2ft"></div>
+                  <div class="room__label label">Kitchen</div>
+                  <div class="room__item cabinets t0 l4ft w12ft3in h2ft"></div>
                   <div class="room__item cabinets t4ft l0 w2ft h5ft"></div>
                   <div class="room__item cabinets cabinets--pantry t0 l0 w4ft h4ft">
                     <div class="pantry b0 r0 w3ft h3ft">
@@ -689,11 +241,26 @@
                   <div class="room__item window t0 l9ft w3ft h3in"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Office</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--office pr">
+              <button class="room room--opening room--opening-above">
+                <div class="room__item wall t0 l0 w100% h3in"></div>
+                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <div class="room__item wall b0 l0 w100% h3in"></div>
+                <div class="room__item wall b0 r0 w3in h100%"></div>
+                <div class="room__buffer">
+                  <div class="room__label label">Open Above</div>
+                </div>
+              </button>
+              <button class="room room--stairs">
+                <div class="room__item wall t0 l0 w100% h3in"></div>
+                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <div class="room__item wall b0 l0 w100% h3in"></div>
+                <!-- <div class="room__item wall b0 r0 w3in h100%"></div> -->
+                <div class="room__buffer">
+                  <div class="room__label label">Upstairs</div>
+                  <div class="room__item steps steps--going-up"></div>
+                </div>
+              </button>
+              <button class="room room--office">
                 <div class="room__item wall t0 l0 w9ft3in h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
@@ -708,86 +275,59 @@
                   <!-- <div class="room__item window b6ft l0 w3in h3ft"></div> -->
                   <div class="room__item door door--left t0 r2ft r180deg"></div>
                   <div class="room__item closet closet--open-left b0 r0 w2ft h6ft"></div>
+                  <div class="label">Office</div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Utility</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--utility pr">
+              <button class="room room--utility">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Utility</div>
                   <div class="room__item closet closet--open-right t0 l0 w1ft h7ft"></div>
                   <div class="room__item door door--left t0 r0 r270deg flipX"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Powder</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--powder pr">
+              <button class="room room--powder">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
-                  <div class="room__item window b0 lcenter w2ft h3in"></div>
+                  <div class="room__label label">Powder</div>
+                  <div class="room__item window b0 lcenter w3ft h3in"></div>
                   <div class="room__item door door--left t0 r0 r270deg flipX"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Closet</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--closet pr">
+              <button class="room room--closet">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Closet</div>
                   <div class="room__item closet closet--open-top b0 l0 w100% h2ft"></div>
                   <div class="room__item door door--left t0 r0 r270deg flipX"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Porch</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--porch pr">
-                <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
-                <div class="room__item wall b0 l0 w100% h3in"></div>
-                <div class="room__item wall b0 r0 w3in h100%"></div>
-                <div class="room__buffer">
-                  <div class="room__item door door--left t0 l0 r90deg"></div>
+              <button class="room room--porch">
+                <!-- <div class="room__item wall t0 l0 w100% h3in"></div>
+                  <div class="room__item wall t0 l0 w3in h100%"></div>
+                  <div class="room__item wall b0 l0 w100% h3in"></div>
+                  <div class="room__item wall b0 r0 w3in h100%"></div> -->
+                <div class="room__buffer room__buffer--no-grid">
+                  <div class="room__label label">Porch</div>
+                  <!-- <div class="room__item door door--left t0 l0 r90deg"></div> -->
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Stairs</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--stairs pr">
+              <button class="room room--living room--living-modified" data-toggle="tab" data-target="tab_living">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
-                <div class="room__item wall b0 l0 w100% h3in"></div>
-                <!-- <div class="room__item wall b0 r0 w3in h100%"></div> -->
-                <div class="room__buffer">
-                  <div class="room__item steps steps--going-up"></div>
-                </div>
-              </button>
-
-              <hr>
-              <h3 class="title">Living</h3>
-              <h5 class="subtitle">Downstairs</h5>
-              <button class="room room--living pr">
-                <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <div class="room__item wall b0 r0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Living</div>
                   <div class="room__item door door--left door--sm t0 l0ft r90deg"></div>
                   <div class="room__item door door--left door--sm t0 l2ft flipX r270deg"></div>
                   <div class="room__item window t0 r0 w3ft h3in no-r-offset"></div>
@@ -803,55 +343,59 @@
                   <div class="room__item door door--left b0 l3in flipY r270deg"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Master Closet</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--master-closet pr">
+            </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some downstairs notes here...</p>
+        </section>
+      </div>
+      <div id="nav_upstairs" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Upstairs</h3>
+          <h5 class="subtitle">Top Down View</h5>
+          <div class="container__overflow">
+            <div class="floor-plan [ will-scale ]">
+              <button class="room room--master-bed">
+                <div class="room__item wall t0 l0 w100% h3in"></div>
+                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall b0 l0 w10ft3in h3in"></div> -->
+                <!-- <div class="room__item wall t0 r0 w3in h7ft3in"></div> -->
+                <div class="room__item wall b9ft r0 w3ft h3in"></div>
+                <div class="room__item wall b0 r3ft w3in h9ft3in"></div>
+                <div class="room__buffer">
+                  <div class="room__label label">Master Bed</div>
+                  <div class="room__item window t0 l3ft w3ft h3in"></div>
+                  <div class="room__item window t0 l6ft w3ft h3in"></div>
+                  <div class="room__item window t3ft l0 w3in h3ft"></div>
+                  <div class="room__item window t6ft l0 w3in h3ft"></div>
+                  <div class="room__item door door--left t10ft9in l7ft6in r180deg"></div>
+                  <div class="room__item door door--left b3in l7ft6in flipX"></div>
+                  <!-- <div class="room__item door door--left b0 l0"></div> -->
+                </div>
+              </button>
+              <button class="room room--master-closet">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Master Closet</div>
                   <div class="room__item closet closet--open-left t0 r0 w2ft h7ft"></div>
                   <div class="room__item door door--left door--sm t1ft6in l0 flipY"></div>
                   <div class="room__item door door--left door--sm t3ft6in l0"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Master Bed</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--master-bed pr">
-                <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
-                <div class="room__item wall b0 l0 w10ft3in h3in"></div>
-                <div class="room__item wall t0 r0 w3in h7ft3in"></div>
-                <div class="room__item wall b9ft r0 w3ft h3in"></div>
-                <div class="room__item wall b0 r3ft w3in h9ft3in"></div>
-                <div class="room__buffer">
-                  <div class="room__item window t0 l3ft w3ft h3in"></div>
-                  <div class="room__item window t0 l6ft w3ft h3in"></div>
-                  <div class="room__item window t3ft l0 w3in h3ft"></div>
-                  <div class="room__item window t6ft l0 w3in h3ft"></div>
-                  <div class="room__item door door--left t11ft l7ft6in r180deg"></div>
-                  <div class="room__item door door--left b0 l7ft6in flipX"></div>
-                  <!-- <div class="room__item door door--left b0 l0"></div> -->
-                </div>
-              </button>
-
-              <hr>
-              <h3 class="title">Master Bath</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--master-bath pr">
+              <button class="room room--master-bath">
                 <div class="room__item wall t0 l0 w10ft3in h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <!-- <div class="room__item wall t0 r0 w3in h100%"></div> -->
                 <div class="room__item wall t0 r2ft w3in h3ft"></div>
                 <div class="room__item wall t3ft r0 w2ft3in h3in"></div>
-                <div class="room__item wall t3ft r0 w3in h7ft3in"></div>
+                <!-- <div class="room__item wall t3ft r0 w3in h7ft3in"></div> -->
                 <div class="room__buffer">
+                  <div class="room__label label">Master Bath</div>
                   <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
                   <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
                   <div class="room__item window b0 l3ft w3ft h3in"></div>
@@ -859,54 +403,50 @@
                   <div class="room__item door door--left door--sm t0 l5ft flipX r270deg"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Laundry</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--laundry pr">
+              <button class="room room--laundry">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Laundry</div>
                   <div class="room__item closet closet--open-right t0 l0 w2ft h100%"></div>
                   <div class="room__item closet closet--open-left t0 r0 w2ft h100%"></div>
                   <div class="room__item window b0 lcenter w3ft h3in"></div>
                   <div class="room__item door door--left t0 l2ft3in r270deg flipX"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Bathroom</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--bathroom pr">
+              <button class="room room--bathroom">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Bathroom</div>
                   <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
                   <div class="room__item door door--left t0 l0 flipY"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Opening</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--opening pr">
+              <button class="room room--stairs">
+                <div class="room__item wall t0 l3in w100% h3in"></div>
+                <div class="room__item wall t0 l0 w3in"></div>
+                <div class="room__item wall b0 l3in w100% h3in"></div>
+                <div class="room__item wall b0 r0 w3in h100%"></div>
+                <div class="room__buffer">
+                  <div class="room__label label">Downstairs</div>
+                  <div class="room__item steps steps--going-down"></div>
+                </div>
+              </button>
+              <button class="room room--opening">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h100%"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
-                  <div class="room__label label">Open Below</div>
+                  <div class="label">Open Below</div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Bedroom 1</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--bedroom-1 pr">
+              <button class="room room--bedroom-1">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 l0 w3in h7ft3in"></div>
                 <div class="room__item wall t7ft3in l0 w2ft3in h3in"></div>
@@ -914,6 +454,7 @@
                 <div class="room__item wall b0 r0 w10ft3in h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Bedroom 1</div>
                   <div class="room__item closet closet--open-right t0 l0 w2ft h7ft"></div>
                   <div class="room__item window t0 r3ft w3ft h3in"></div>
                   <div class="room__item window t0 r6ft w3ft h3in"></div>
@@ -922,22 +463,19 @@
                   <div class="room__item door door--left b0 l2ft"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Bedroom 2</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--bedroom-2 pr">
-                <div class="room__item wall t0 l3ft w10ft3in h3in"></div>
+              <button class="room room--bedroom-2">
+                <!-- <div class="room__item wall t0 l3ft w10ft3in h3in"></div> -->
                 <div class="room__item wall t0 l3ft w3in h3ft3in"></div>
-                <div class="room__item wall t0 l6ft w3in h2ft3in"></div>
+                <div class="room__item wall t3in l6ft w3in h2ft"></div>
                 <div class="room__item wall t2ft l3ft w3ft h3in"></div>
                 <div class="room__item wall t3ft l0 w3ft h3in"></div>
                 <div class="room__item wall t3ft l0 w3in h10ft3in"></div>
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Bedroom 2</div>
                   <div class="room__item closet closet--open-bottom t0 l6ft w7ft h2ft"></div>
-                  <div class="room__item door door--left door--xs t0 l3ft flipY"></div>
+                  <div class="room__item door door--left door--xs t3in l3ft flipY"></div>
                   <div class="room__item door door--left t3ft l0 r90deg"></div>
                   <div class="room__item window b0 r3ft w3ft h3in"></div>
                   <div class="room__item window b0 r6ft w3ft h3in"></div>
@@ -945,26 +483,573 @@
                   <div class="room__item window b6ft r0 w3in h3ft"></div>
                 </div>
               </button>
-
-              <hr>
-              <h3 class="title">Sitting Area</h3>
-              <h5 class="subtitle">Upstairs</h5>
-              <button class="room room--sitting-area pr">
+              <button class="room room--sitting-area">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
-                <!-- <div class="room__item wall b0 l0 w100% h3in"></div> -->
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <div class="room__item wall b0 r0 w1ft3in h3in"></div>
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
+                  <div class="room__label label">Sitting Area</div>
                   <div class="room__item closet closet--open-left t0 r0 w1ft h7ft"></div>
                   <div class="room__item window t0 l2ft w3ft h3in"></div>
                 </div>
               </button>
-
             </div>
-          </section>
-        </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some upstairs notes here...</p>
+        </section>
       </div>
+      <div id="nav_basement" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Basement</h3>
+          <h5 class="subtitle">Top Down View</h5>
+          <div class="container__overflow">
+            <div class="floor-plan [ will-scale ]">
+              <button class="room room--basement">
+                <div class="room__item wall t0 l0 w100% h3in"></div>
+                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <div class="room__item wall b0 l0 w100% h3in"></div>
+                <div class="room__item wall b0 r0 w3in h100%"></div>
+                <div class="room__buffer">
+                  <div class="label">Not sure if we can do this yet?</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="nav_front" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Front</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <div class="exterior exterior--front [ will-scale ]">
+              <div class="room room--flush t0 l0 w100% h100%">
+                <div class="room__buffer">
+                  <div class="room__item roof roof--front t0 l0 w100% h10ft"></div>
+
+                  <div class="room__item window b3ft l0 w3ft h5ft no-l-offset"></div>
+                  <div class="room__item window b3ft l3ft w3ft h5ft"></div>
+
+                  <div class="room__item window b5ft r19ft w3ft h3ft"></div>
+
+                  <div class="room__item window window--skylight t3ft l3ft w3ft h4ft"></div>
+
+                  <div class="room__item window t11ft l0 w3ft h1ft6in no-l-offset"></div>
+                  <div class="room__item window t11ft l3ft w3ft h1ft6in"></div>
+
+                  <div class="room__item window t11ft r19ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft r25ft w3ft h3ft"></div>
+
+                  <div class="room__item window t11ft r3ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft r6ft w3ft h4ft"></div>
+
+                  <div class="room__item area area--porch b0 r0 w13ft h8ft"></div>
+                  <div class="room__item window b0 r9ft w3ft h6ft9in">
+                    <div class="room__item window__door"></div>
+                  </div>
+                  <div class="room__item window b6ft6in r9ft w3ft h1ft6in"></div>
+                  <div class="room__item window b6ft6in r6ft w3ft h1ft6in"></div>
+                  <div class="room__item window b6ft6in r3ft w3ft h1ft6in"></div>
+                  <div class="room__item window b6ft6in r0 w3ft h1ft6in no-r-offset"></div>
+                  <!-- <div class="label"></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some front notes here...</p>
+        </section>
+      </div>
+      <div id="nav_right" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Right</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <div class="exterior exterior--right [ will-scale ]">
+              <div class="room room--flush t0 l0 w100% h100%">
+                <div class="room__buffer">
+                  <div class="room__item roof roof--right">
+                    <div class="roof__buffer"></div>
+                  </div>
+
+                  <div class="room__item area area--porch b0 l0 w6ft h8ft"></div>
+                  <div class="room__item window b6ft6in l6ft w3ft h1ft6in"></div>
+                  <div class="room__item window b3ft r0 w3ft h5ft no-r-offset"></div>
+                  <div class="room__item window b3ft r3ft w3ft h5ft"></div>
+                  <div class="room__item window b3ft r6ft w3ft h5ft"></div>
+
+                  <div class="room__item window t11ft l6ft w3ft h3ft"></div>
+
+                  <div class="room__item window t11ft r3ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft r6ft w3ft h4ft"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some right notes here...</p>
+        </section>
+      </div>
+      <div id="nav_back" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Back</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <div class="exterior exterior--back [ will-scale ]">
+              <div class="room room--flush t0 l0 w100% h100%">
+                <div class="room__buffer">
+                  <div class="room__item roof roof--back t0 l0 w100% h10ft"></div>
+
+                  <div class="room__item window b3ft l0ft w3ft h5ft"></div>
+                  <div class="room__item window b3ft l3ft w3ft h5ft"></div>
+                  <div class="room__item window b3ft l6ft w3ft h5ft"></div>
+                  <div class="room__item window b6ft6in l9ft w4ft h1ft6in"></div>
+                  <div class="room__item window b0 l9ft w2ft h6ft9in">
+                    <div class="room__item window__door window__door--flush-right"></div>
+                  </div>
+                  <div class="room__item window b0 l11ft w2ft h6ft9in">
+                    <div class="room__item window__door window__door--flush-left"></div>
+                  </div>
+
+                  <div class="room__item window b5ft l17ft w3ft h3ft"></div>
+                  <div class="room__item window b5ft l20ft w3ft h3ft"></div>
+
+                  <div class="room__item window b5ft r3ft w3ft h3ft"></div>
+                  <!-- TODO: use another window in the kitchen? -->
+                  <!-- <div class="room__item window b5ft r6ft w3ft h3ft"></div> -->
+
+                  <div class="room__item window t11ft l3ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft l6ft w3ft h4ft"></div>
+
+                  <div class="room__item window t11ft l17ft w3ft h3ft"></div>
+
+                  <div class="room__item window t11ft r3ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft r6ft w3ft h4ft"></div>
+
+                  <div class="room__item window window--skylight t1ft6in l17ft w3ft h4ft"></div>
+                  <div class="room__item window window--skylight t1ft6in l20ft w3ft h4ft"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some back notes here...</p>
+        </section>
+      </div>
+      <div id="nav_left" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Left</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <div class="exterior exterior--left [ will-scale ]">
+              <div class="room room--flush t0 l0 w100% h100%">
+                <div class="room__buffer">
+                  <div class="room__item roof roof--left">
+                    <div class="roof__buffer"></div>
+                  </div>
+
+                  <div class="room__item window t11ft l3ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft l6ft w3ft h4ft"></div>
+                  <div class="room__item window t11ft r0ft w3ft h1ft6in no-r-offset"></div>
+                  <!-- <div class="room__item window t11ft r3ft w3ft h1ft6in"></div> -->
+
+                  <div class="room__item window b3ft l3ft w3ft h5ft"></div>
+                  <div class="room__item window b3ft l6ft w3ft h5ft"></div>
+
+                  <div class="room__item window b3ft r0 w3ft h5ft no-r-offset"></div>
+                  <!-- <div class="room__item window b5ft r3ft w3ft h3ft"></div> -->
+                  <!-- <div class="room__item window b3ft r6ft w3ft h5ft"></div> -->
+
+                  <div class="room__item window b6ft6in l9ft w3ft h1ft6in"></div>
+                  <div class="room__item window b0 l9ft w3ft h6ft9in">
+                    <div class="room__item window__door"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="title">Notes</h3>
+          <h5 class="subtitle">-</h5>
+          <p>some left notes here...</p>
+        </section>
+      </div>
+      <div id="nav_elements" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Elements</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <h3 class="title">Bathtub</h3>
+            <h5 class="subtitle">-</h5>
+            <div class="bathtub bathtub--vertical">
+              <div class="bathtub__tub"></div>
+            </div>
+            <hr>
+            <div class="bathtub bathtub--horizontal">
+              <div class="bathtub__tub"></div>
+            </div>
+            <h3 class="title">Toilets</h3>
+            <h5 class="subtitle">-</h5>
+            <div class="toilet toilet--vertical">
+              <div class="toilet__item toilet__bowl"></div>
+              <div class="toilet__item toilet__tank"></div>
+            </div>
+            <hr>
+            <div class="toilet toilet--vertical toilet--flipped">
+              <div class="toilet__item toilet__bowl"></div>
+              <div class="toilet__item toilet__tank"></div>
+            </div>
+            <hr>
+            <div class="toilet toilet--horizontal">
+              <div class="toilet__item toilet__bowl"></div>
+              <div class="toilet__item toilet__tank"></div>
+            </div>
+            <hr>
+            <div class="toilet toilet--horizontal toilet--flipped">
+              <div class="toilet__item toilet__bowl"></div>
+              <div class="toilet__item toilet__tank"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="nav_rooms" class="nav__pane">
+        <section class="container">
+          <h3 class="title">Rooms</h3>
+          <h5 class="subtitle">-</h5>
+          <div class="container__overflow">
+            <h3 class="title">Dining</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--dining pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w9ft3in h3in"></div>
+              <div class="room__item wall t0 r0 w3in h9ft3in"></div>
+              <div class="room__buffer">
+                <div class="room__item window t0 l3ft w3ft h3in"></div>
+                <div class="room__item window t3ft l0 w3in h3ft"></div>
+                <div class="room__item window t6ft l0 w3in h3ft"></div>
+                <div class="room__item door door--left b0 l0"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Kitchen</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--kitchen pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h9ft3in"></div>
+              <!-- <div class="room__item wall b0 l0 w100% h3in"></div> -->
+              <div class="room__item wall t0 r0 w3in h2ft3in"></div>
+              <div class="room__buffer">
+                <div class="room__item cabinets t0 l4ft w12ft h2ft"></div>
+                <div class="room__item cabinets t4ft l0 w2ft h5ft"></div>
+                <div class="room__item cabinets cabinets--pantry t0 l0 w4ft h4ft">
+                  <div class="pantry b0 r0 w3ft h3ft">
+                    <div class="room__item door door--left door--sm flipX t6in l0"></div>
+                  </div>
+                </div>
+                <div class="room__item sink t0 w3ft h2ft">
+                  <div class="sink__bowl"></div>
+                </div>
+                <div class="room__item island t5ft6in l6ft w6ft h3ft6in">
+                  <div class="room__item stove t0 lcenter">
+                    <div class="stove__burner t0 l0"></div>
+                    <div class="stove__burner t0 r0"></div>
+                    <div class="stove__burner b0 l0"></div>
+                    <div class="stove__burner b0 r0"></div>
+                  </div>
+                </div>
+                <div class="room__item fridge fridge--opens-right t6ft l0 w2ft3in h3ft">
+                  <div class="label">FR</div>
+                </div>
+                <div class="room__item dishwasher dishwasher--opens-down t0 r2ft w3ft h2ft3in">
+                  <div class="label">DW</div>
+                </div>
+                <div class="room__item window t0 l6ft w3ft h3in"></div>
+                <div class="room__item window t0 l9ft w3ft h3in"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Office</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--office pr">
+              <div class="room__item wall t0 l0 w9ft3in h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 r2ft w3in h7ft3in"></div>
+              <div class="room__item wall t7ft r0 w2ft3in h3in"></div>
+              <div class="room__item wall t7ft r0 w3in h6ft3in"></div>
+              <div class="room__buffer">
+                <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
+                <div class="room__item window b0 l3ft w3ft h3in"></div>
+                <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
+                <!-- <div class="room__item window b3ft l0 w3in h3ft"></div> -->
+                <!-- <div class="room__item window b6ft l0 w3in h3ft"></div> -->
+                <div class="room__item door door--left t0 r2ft r180deg"></div>
+                <div class="room__item closet closet--open-left b0 r0 w2ft h6ft"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Utility</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--utility pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-right t0 l0 w1ft h7ft"></div>
+                <div class="room__item door door--left t0 r0 r270deg flipX"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Powder</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--powder pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item window b0 lcenter w2ft h3in"></div>
+                <div class="room__item door door--left t0 r0 r270deg flipX"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Closet</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--closet pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-top b0 l0 w100% h2ft"></div>
+                <div class="room__item door door--left t0 r0 r270deg flipX"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Porch</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--porch pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item door door--left t0 l0 r90deg"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Stairs</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--stairs pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <!-- <div class="room__item wall b0 r0 w3in h100%"></div> -->
+              <div class="room__buffer">
+                <div class="room__item steps steps--going-up"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Living</h3>
+            <h5 class="subtitle">Downstairs</h5>
+            <button class="room room--living pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 r0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item door door--left door--sm t0 l0ft r90deg"></div>
+                <div class="room__item door door--left door--sm t0 l2ft flipX r270deg"></div>
+                <div class="room__item window t0 r0 w3ft h3in no-r-offset"></div>
+                <div class="room__item window t0 r3ft w3ft h3in"></div>
+                <div class="room__item window t0 r6ft w3ft h3in"></div>
+                <div class="room__item window t0 r0 w3in h3ft no-t-offset"></div>
+                <div class="room__item window t3ft r0 w3in h3ft"></div>
+                <div class="room__item window t6ft r0 w3in h3ft"></div>
+                <div class="room__item window b0 r0 w3in h3ft no-b-offset"></div>
+                <div class="room__item window b0 r0 w3ft h3in no-r-offset"></div>
+                <div class="room__item window b0 r3ft w3ft h3in"></div>
+                <div class="room__item window b0 r6ft w3ft h3in"></div>
+                <div class="room__item door door--left b0 l3in flipY r270deg"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Master Closet</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--master-closet pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-left t0 r0 w2ft h7ft"></div>
+                <div class="room__item door door--left door--sm t1ft6in l0 flipY"></div>
+                <div class="room__item door door--left door--sm t3ft6in l0"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Master Bed</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--master-bed pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w10ft3in h3in"></div>
+              <div class="room__item wall t0 r0 w3in h7ft3in"></div>
+              <div class="room__item wall b9ft r0 w3ft h3in"></div>
+              <div class="room__item wall b0 r3ft w3in h9ft3in"></div>
+              <div class="room__buffer">
+                <div class="room__item window t0 l3ft w3ft h3in"></div>
+                <div class="room__item window t0 l6ft w3ft h3in"></div>
+                <div class="room__item window t3ft l0 w3in h3ft"></div>
+                <div class="room__item window t6ft l0 w3in h3ft"></div>
+                <div class="room__item door door--left t11ft l7ft6in r180deg"></div>
+                <div class="room__item door door--left b0 l7ft6in flipX"></div>
+                <!-- <div class="room__item door door--left b0 l0"></div> -->
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Master Bath</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--master-bath pr">
+              <div class="room__item wall t0 l0 w10ft3in h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <!-- <div class="room__item wall t0 r0 w3in h100%"></div> -->
+              <div class="room__item wall t0 r2ft w3in h3ft"></div>
+              <div class="room__item wall t3ft r0 w2ft3in h3in"></div>
+              <div class="room__item wall t3ft r0 w3in h7ft3in"></div>
+              <div class="room__buffer">
+                <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
+                <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
+                <div class="room__item window b0 l3ft w3ft h3in"></div>
+                <div class="room__item door door--left door--sm t0 l3ft r90deg"></div>
+                <div class="room__item door door--left door--sm t0 l5ft flipX r270deg"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Laundry</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--laundry pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-right t0 l0 w2ft h100%"></div>
+                <div class="room__item closet closet--open-left t0 r0 w2ft h100%"></div>
+                <div class="room__item window b0 lcenter w3ft h3in"></div>
+                <div class="room__item door door--left t0 l2ft3in r270deg flipX"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Bathroom</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--bathroom pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
+                <div class="room__item door door--left t0 l0 flipY"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Opening</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--opening pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__label label">Open Below</div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Bedroom 1</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--bedroom-1 pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h7ft3in"></div>
+              <div class="room__item wall t7ft3in l0 w2ft3in h3in"></div>
+              <div class="room__item wall t7ft3in l2ft w3in h6ft3in"></div>
+              <div class="room__item wall b0 r0 w10ft3in h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-right t0 l0 w2ft h7ft"></div>
+                <div class="room__item window t0 r3ft w3ft h3in"></div>
+                <div class="room__item window t0 r6ft w3ft h3in"></div>
+                <div class="room__item window t3ft r0 w3in h3ft"></div>
+                <div class="room__item window t6ft r0 w3in h3ft"></div>
+                <div class="room__item door door--left b0 l2ft"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Bedroom 2</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--bedroom-2 pr">
+              <div class="room__item wall t0 l3ft w10ft3in h3in"></div>
+              <div class="room__item wall t0 l3ft w3in h3ft3in"></div>
+              <div class="room__item wall t0 l6ft w3in h2ft3in"></div>
+              <div class="room__item wall t2ft l3ft w3ft h3in"></div>
+              <div class="room__item wall t3ft l0 w3ft h3in"></div>
+              <div class="room__item wall t3ft l0 w3in h10ft3in"></div>
+              <div class="room__item wall b0 l0 w100% h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-bottom t0 l6ft w7ft h2ft"></div>
+                <div class="room__item door door--left door--xs t0 l3ft flipY"></div>
+                <div class="room__item door door--left t3ft l0 r90deg"></div>
+                <div class="room__item window b0 r3ft w3ft h3in"></div>
+                <div class="room__item window b0 r6ft w3ft h3in"></div>
+                <!-- <div class="room__item window b3ft r0 w3in h3ft"></div> -->
+                <div class="room__item window b6ft r0 w3in h3ft"></div>
+              </div>
+            </button>
+
+            <hr>
+            <h3 class="title">Sitting Area</h3>
+            <h5 class="subtitle">Upstairs</h5>
+            <button class="room room--sitting-area pr">
+              <div class="room__item wall t0 l0 w100% h3in"></div>
+              <div class="room__item wall t0 l0 w3in h100%"></div>
+              <!-- <div class="room__item wall b0 l0 w100% h3in"></div> -->
+              <div class="room__item wall b0 r0 w1ft3in h3in"></div>
+              <div class="room__item wall b0 r0 w3in h100%"></div>
+              <div class="room__buffer">
+                <div class="room__item closet closet--open-left t0 r0 w1ft h7ft"></div>
+                <div class="room__item window t0 l2ft w3ft h3in"></div>
+              </div>
+            </button>
+
+          </div>
+        </section>
+      </div>
+    </div>
     </div>
   </main>
 

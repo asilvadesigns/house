@@ -1,3 +1,60 @@
+const Scale = (() => {
+  const TOGGLE_UP = document.querySelector('[data-increase="floorplan-scale"]');
+  const TOGGLE_DOWN = document.querySelector('[data-decrease="floorplan-scale"]');
+  const TOGGLE_RESET = document.querySelector('[data-reset="floorplan-scale"]');
+  const CORE = document.getElementById('core');
+  let CURRENT_KEY = 4;
+  const ORIGINAL_KEY = 4;
+  const VALUES = [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4];
+
+  function init() {
+    if (!TOGGLE_UP || !TOGGLE_DOWN || !TOGGLE_RESET || !CORE) {
+      throw new Error('insufficent UI exists for scale variations');
+    }
+
+    _addEventListeners();
+  }
+
+  function _addEventListeners() {
+    TOGGLE_UP.addEventListener('click', _increase);
+    TOGGLE_DOWN.addEventListener('click', _decrease);
+    TOGGLE_RESET.addEventListener('click', _reset);
+  }
+
+  function _increase(evt) {
+    CURRENT_KEY++;
+    if (CURRENT_KEY >= VALUES.length - 1) {
+      CURRENT_KEY = VALUES.length - 1;
+    }
+    console.log('increase', CURRENT_KEY);
+    _render();
+  }
+
+  function _decrease(evt) {
+    CURRENT_KEY--;
+    if (CURRENT_KEY <= 0) {
+      CURRENT_KEY = 0;
+    }
+    console.log('decrease', CURRENT_KEY);
+    _render();
+  }
+
+  function _reset(evt) {
+    CURRENT_KEY = ORIGINAL_KEY;
+    _render();
+  }
+
+  function _render() {
+    CORE.setAttribute("data-floorplan-scale", VALUES[CURRENT_KEY]);
+  }
+
+  return {
+    init: init,
+  }
+
+})();
+Scale.init();
+
 const Grid = (() => {
   const TOGGLE = document.querySelectorAll('[data-toggle="grid"]');
   const CORE = document.getElementById('core');
