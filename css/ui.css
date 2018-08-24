@@ -623,7 +623,7 @@ button.room:hover .room__buffer {
 
 .room--porch {
   width: calc(13rem + 0.5rem);
-  height: calc(6rem + 0.5rem);
+  height: calc(3rem + 0.5rem);
 }
 
 .room--stairs {
@@ -1356,6 +1356,14 @@ button.room:hover .room__buffer {
   left: 1rem;
 }
 
+.l1ft3in {
+  left: 1.25rem;
+}
+
+.l1ft6in {
+  left: 1.5rem;
+}
+
 .l2ft {
   left: 2rem;
 }
@@ -1400,6 +1408,10 @@ button.room:hover .room__buffer {
   left: 11rem;
 }
 
+.l12ft {
+  left: 12rem;
+}
+
 .l13ft {
   left: 13rem;
 }
@@ -1414,6 +1426,10 @@ button.room:hover .room__buffer {
 
 .l17ft {
   left: 17rem;
+}
+
+.l19ft {
+  left: 19rem;
 }
 
 .l20ft {
@@ -1506,6 +1522,10 @@ button.room:hover .room__buffer {
 
 .w4ft {
   width: 4rem;
+}
+
+.w4ft6in {
+  width: 4.5rem;
 }
 
 .w6ft {
@@ -1718,7 +1738,7 @@ button.room:hover .room__buffer {
 }
 
 .floor-plan .room--porch {
-  top: 20rem;
+  top: 23rem;
   left: 27rem;
 }
 
@@ -1762,7 +1782,7 @@ button.room:hover .room__buffer {
 }
 
 .floor-plan .room--living-modified {
-  height: calc(19.75rem + 0.5rem);
+  height: calc(22.75rem + 0.5rem);
 }
 
 .floor-plan .room--opening {
