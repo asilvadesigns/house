@@ -195,6 +195,7 @@
             <div class="floor-plan [ will-scale ]">
               <button class="room room--dining">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
+                <div class="room__item wall t0 r0 w3in h3ft3in"></div>
                 <!-- <div class="room__item wall t0 l0 w3in h100%"></div> -->
                 <!-- <div class="room__item wall b0 l0 w9ft3in h3in"></div> -->
                 <!-- <div class="room__item wall t0 r0 w3in h9ft3in"></div> -->
@@ -272,7 +273,7 @@
                   <div class="room__item window b0 l3ft w3ft h3in"></div>
                   <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
                   <!-- <div class="room__item window b3ft l0 w3in h3ft"></div> -->
-                  <!-- <div class="room__item window b6ft l0 w3in h3ft"></div> -->
+                  <div class="room__item window b6ft l0 w3in h3ft"></div>
                   <div class="room__item door door--left t0 r2ft r180deg"></div>
                   <div class="room__item closet closet--open-left b0 r0 w2ft h6ft"></div>
                   <div class="label">Office</div>
@@ -328,15 +329,15 @@
                 <div class="room__item wall b0 r0 w3in h100%"></div>
                 <div class="room__buffer">
                   <div class="room__label label">Living</div>
-                  <div class="room__item door door--left door--sm t0 l0ft r90deg"></div>
-                  <div class="room__item door door--left door--sm t0 l2ft flipX r270deg"></div>
+                  <div class="room__item door door--left t0 l1ft3in r90deg"></div>
+                  <!-- <div class="room__item door door--left door--sm t0 l2ft flipX r270deg"></div> -->
                   <div class="room__item window t0 r0 w3ft h3in no-r-offset"></div>
                   <div class="room__item window t0 r3ft w3ft h3in"></div>
                   <div class="room__item window t0 r6ft w3ft h3in"></div>
                   <div class="room__item window t0 r0 w3in h3ft no-t-offset"></div>
                   <div class="room__item window t3ft r0 w3in h3ft"></div>
-                  <div class="room__item window t6ft r0 w3in h3ft"></div>
-                  <!-- <div class="room__item window b0 r0 w3in h3ft no-b-offset"></div> -->
+                  <!-- <div class="room__item window t6ft r0 w3in h3ft"></div> -->
+                  <div class="room__item window b3ft r0 w3in h3ft"></div>
                   <!-- <div class="room__item window b0 r0 w3ft h3in no-r-offset"></div> -->
                   <div class="room__item window b0 l0 w1ft h3in no-l-offset"></div>
                   <div class="room__item window b0 r3ft w3ft h3in"></div>
@@ -364,28 +365,38 @@
                 <!-- <div class="room__item wall t0 r0 w3in h7ft3in"></div> -->
                 <div class="room__item wall b9ft r0 w3ft h3in"></div>
                 <div class="room__item wall b0 r3ft w3in h9ft3in"></div>
+
+                <div class="room__item wall t13ft l0 w3ft3in h3in"></div>
+                <div class="room__item wall t13ft r3ft w3ft3in h3in"></div>
+
                 <div class="room__buffer">
                   <div class="room__label label">Master Bed</div>
                   <!-- <div class="room__item window t0 l3ft w3ft h3in"></div> -->
-                  <div class="room__item window t0 l6ft w3ft h3in"></div>
+                  <div class="room__item window t0 l9ft w3ft h3in"></div>
                   <div class="room__item window t3ft l0 w3in h3ft"></div>
                   <div class="room__item window t6ft l0 w3in h3ft"></div>
                   <div class="room__item window t9ft l0 w3in h3ft"></div>
-                  <div class="room__item door door--left t10ft9in l7ft6in r180deg"></div>
-                  <div class="room__item door door--left b3in l7ft6in flipX"></div>
+                  <div class="room__item door door--left b6ft l7ft6in r180deg"></div>
+                  <div class="room__item door door--left b3ft3in l7ft6in flipX"></div>
                   <!-- <div class="room__item door door--left b0 l0"></div> -->
+
+                  <div class="room__item door door--left door--sm t13ft l3ft r90deg"></div>
+                  <div class="room__item door door--left door--sm t13ft l5ft flipX r270deg"></div>
+                  <div class="room__item closet closet--open-right t13ft l0 w2ft h3ft"></div>
+                  <div class="room__item closet closet--open-left t13ft r3ft w2ft h3ft"></div>
                 </div>
               </button>
               <button class="room room--master-closet">
                 <div class="room__item wall t0 l0 w100% h3in"></div>
-                <div class="room__item wall t0 l0 w3in h100%"></div>
+                <!-- <div class="room__item wall t0 l0 w3in h100%"></div -->
                 <div class="room__item wall b0 l0 w100% h3in"></div>
                 <div class="room__item wall t0 r0 w3in h100%"></div>
                 <div class="room__buffer">
-                  <div class="room__label label">Master Closet</div>
+                  <div class="room__item window t0 l2ft w3ft h3in"></div>
+                  <!-- <div class="room__label label">Master Closet</div>
                   <div class="room__item closet closet--open-left t0 r0 w2ft h7ft"></div>
                   <div class="room__item door door--left door--sm t1ft6in l0 flipY"></div>
-                  <div class="room__item door door--left door--sm t3ft6in l0"></div>
+                  <div class="room__item door door--left door--sm t3ft6in l0"></div> -->
                 </div>
               </button>
               <button class="room room--master-bath">
@@ -401,6 +412,8 @@
                   <div class="room__item window b0 l0 w3in h3ft no-b-offset"></div>
                   <div class="room__item window b0 l0 w3ft h3in no-l-offset"></div>
                   <div class="room__item window b0 l3ft w3ft h3in"></div>
+                  <div class="room__item window b0 r0 w3ft h3in no-r-offset"></div>
+                  <div class="room__item window t1ft l0 w3in h3ft"></div>
                   <div class="room__item door door--left door--sm t0 l3ft r90deg"></div>
                   <div class="room__item door door--left door--sm t0 l5ft flipX r270deg"></div>
                 </div>
@@ -493,7 +506,7 @@
                 <div class="room__buffer">
                   <div class="room__label label">Sitting Area</div>
                   <div class="room__item closet closet--open-left t0 r0 w1ft h7ft"></div>
-                  <div class="room__item window t0 l2ft w3ft h3in"></div>
+                  <div class="room__item window t0 l1ft w3ft h3in"></div>
                 </div>
               </button>
             </div>
@@ -532,24 +545,25 @@
                 <div class="room__buffer">
                   <div class="room__item roof roof--front t0 l0 w100% h10ft"></div>
 
-                  <div class="room__item window b0 l0 w3ft h6ft6in no-b-offset no-l-offset"></div>
-                  <div class="room__item window b0 l3ft w3ft h6ft6in no-b-offset"></div>
+                  <div class="room__item window b2ft l0 w3ft h4ft6in no-l-offset"></div>
+                  <div class="room__item window b2ft l3ft w3ft h4ft6in"></div>
 
-                  <div class="room__item window b3ft6in l19ft w3ft h3ft"></div>
+                  <div class="room__item window b2ft l19ft w3ft h4ft6in"></div>
 
                   <div class="room__item window window--skylight t3ft l3ft w3ft h3ft"></div>
 
                   <div class="room__item window t11ft l0 w3ft h1ft6in no-l-offset"></div>
                   <div class="room__item window t11ft l3ft w3ft h1ft6in"></div>
 
-                  <div class="room__item window t11ft l14ft w3ft h4ft6in"></div>
-                  <div class="room__item window t11ft l19ft w3ft h4ft6in"></div>
+                  <div class="room__item window t11ft l9ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft l14ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft l19ft w3ft h3ft"></div>
 
                   <div class="room__item window t11ft r3ft w3ft h4ft6in"></div>
                   <div class="room__item window t11ft r6ft w3ft h4ft6in"></div>
 
-                  <div class="room__item area area--porch b0 r0 w13ft6in h6ft6in"></div>
-                  <div class="room__item porch__item window b0 r12ft w1ft6in h6ft6in no-b-offset"></div>
+                  <div class="room__item area area--porch b0 r0 w13ft h7ft6in"></div>
+                  <!-- <div class="room__item porch__item window b0 r12ft 1ft6in h6ft6in no-b-offset"></div> -->
                   <!-- <div class="room__item porch__item window b6ft6in r12ft w1ft6in h1ft6in"></div> -->
                   <div class="room__item porch__item window b0 r9ft w3ft h6ft9in">
                     <div class="room__item window__door"></div>
@@ -584,16 +598,17 @@
                     <div class="roof__buffer roof__buffer--cover-right"></div>
                   </div>
 
-                  <div class="room__item area area--porch b0 l0 w4ft h6ft6in"></div>
-                  <div class="room__item window b3ft6in l6ft w3ft h3ft"></div>
-                  <div class="room__item window b0 r0 w3ft h6ft6in no-b-offset no-r-offset"></div>
+                  <div class="room__item area area--porch b0 l0 w3ft h7ft6in"></div>
+                  <div class="room__item area area--porch b0 r0 w3ft h7ft6in"></div>
+                  <div class="room__item window b2ft l6ft w3ft h4ft6in"></div>
                   <div class="room__item window b0 r3ft w3ft h6ft6in no-b-offset"></div>
                   <div class="room__item window b0 r6ft w3ft h6ft6in no-b-offset"></div>
+                  <!-- <div class="room__item window b0 r9ft w3ft h6ft6in no-b-offset"></div> -->
 
-                  <div class="room__item window t11ft l6ft w3ft h4ft6in"></div>
+                  <div class="room__item window t11ft l6ft w3ft h3ft"></div>
 
                   <!-- <div class="room__item window t11ft r3ft w3ft h4ft6in"></div> -->
-                  <div class="room__item window t11ft r6ft w3ft h4ft6in"></div>
+                  <div class="room__item window t11ft r6ft w3ft h3ft"></div>
                 </div>
               </div>
             </div>
@@ -613,22 +628,23 @@
                 <div class="room__buffer">
                   <div class="room__item roof roof--back t0 l0 w100% h10ft"></div>
 
-                  <div class="room__item window b0 l0ft w3ft h6ft6in no-b-offset"></div>
-                  <div class="room__item window b0 l3ft w3ft h6ft6in no-b-offset"></div>
-                  <div class="room__item window b0 l6ft w3ft h6ft6in no-b-offset"></div>
+                  <div class="room__item area area--porch b0 l0 w13ft h7ft6in"></div>
+                  <div class="room__item porch__item window b0 l0ft w3ft h6ft6in no-b-offset"></div>
+                  <div class="room__item porch__item window b0 l3ft w3ft h6ft6in no-b-offset"></div>
+                  <div class="room__item porch__item window b0 l6ft w3ft h6ft6in no-b-offset"></div>
                   <!-- <div class="room__item window b6ft6in l9ft w4ft h1ft6in"></div> -->
-                  <div class="room__item window b0 l9ft w3ft h6ft9in">
+                  <div class="room__item porch__item window b0 l9ft w3ft h6ft9in">
                     <div class="room__item window__door"></div>
                   </div>
-                  <div class="room__item window b0 l12ft w3ft h6ft9in">
+                  <!-- <div class="room__item window b0 l12ft w3ft h6ft9in">
                     <div class="room__item window__door"></div>
-                  </div>
+                  </div> -->
 
                   <!-- <div class="room__item window b6ft6in r6ft w6ft h1ft6in"></div> -->
                   <div class="room__item window b3ft6in r6ft w6ft h6ft"></div>
                   <!-- <div class="room__item window b3ft6in r9ft w3ft h4ft6in"></div> -->
 
-                  <!-- <div class="room__item window b3ft6in l17ft w3ft h3ft"></div> -->
+                  <div class="room__item window b2ft l18ft w3ft h4ft6in"></div>
 
                   <!-- <div class="room__item window b5ft r3ft w3ft h3ft"></div> -->
                   <!-- TODO: use another window in the kitchen? -->
@@ -637,10 +653,12 @@
                   <div class="room__item window t11ft l3ft w3ft h4ft6in"></div>
                   <div class="room__item window t11ft l6ft w3ft h4ft6in"></div>
 
-                  <div class="room__item window t11ft l17ft w3ft h4ft6in"></div>
+                  <!-- <div class="room__item window t11ft l11ft w3ft h4ft6in"></div> -->
 
                   <!-- <div class="room__item window t11ft r3ft w3ft h4ft6in"></div> -->
-                  <div class="room__item window t11ft r6ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft l18ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft l23ft w3ft h3ft"></div>
+                  <div class="room__item window t11ft r9ft w3ft h3ft"></div>
 
                   <div class="room__item window window--skylight t1ft6in l14ft w3ft h3ft"></div>
                   <div class="room__item window window--skylight t1ft6in l17ft w3ft h3ft"></div>
@@ -669,18 +687,21 @@
                     <div class="roof__buffer roof__buffer--cover-right"></div>
                   </div>
 
-                  <div class="room__item window t11ft l3ft w3ft h4ft6in"></div>
-                  <div class="room__item window t11ft l6ft w3ft h4ft6in"></div>
-                  <div class="room__item window t11ft l9ft w3ft h4ft6in"></div>
+                  <div class="room__item window t11ft l3ft w3ft h6ft"></div>
+                  <div class="room__item window t11ft l6ft w3ft h6ft"></div>
+                  <div class="room__item window t11ft l9ft w3ft h6ft"></div>
+                  <div class="room__item window t11ft r6ft w3ft h3ft"></div>
+                  <!-- <div class="room__item window t11ft r3ft w3ft h1ft6in"></div> -->
                   <div class="room__item window t11ft r0ft w3ft h1ft6in no-r-offset"></div>
                   <!-- <div class="room__item window t11ft r3ft w3ft h1ft6in"></div> -->
 
                   <!-- <div class="room__item window b2ft l3ft w3ft h6ft"></div>
                   <div class="room__item window b2ft l6ft w3ft h6ft"></div> -->
 
-                  <div class="room__item window b0 r0 w3ft h6ft6in no-b-offset no-r-offset"></div>
+                  <div class="room__item window b2ft r0 w3ft h4ft6in no-r-offset"></div>
+                  <!-- <div class="room__item window b2ft r3ft w3ft h4ft6in"></div> -->
                   <!-- <div class="room__item window b5ft r3ft w3ft h3ft"></div> -->
-                  <!-- <div class="room__item window b3ft r6ft w3ft h5ft"></div> -->
+                  <div class="room__item window b2ft r6ft w3ft h4ft6in"></div>
 
                   <!-- <div class="room__item window b6ft6in l9ft w3ft h1ft6in"></div> -->
                   <div class="room__item window b0 l9ft w3ft h6ft9in">

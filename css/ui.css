@@ -1287,6 +1287,10 @@ button.room:hover .room__buffer {
   bottom: 3rem;
 }
 
+.b3ft3in {
+  bottom: 3.25rem;
+}
+
 .b3ft6in {
   bottom: 3.5rem;
 }
@@ -1305,6 +1309,10 @@ button.room:hover .room__buffer {
 
 .b6ft {
   bottom: 6rem;
+}
+
+.b6ft3in {
+  bottom: 6.25rem;
 }
 
 .b6ft6in {
@@ -1428,12 +1436,20 @@ button.room:hover .room__buffer {
   left: 17rem;
 }
 
+.l18ft {
+  left: 18rem;
+}
+
 .l19ft {
   left: 19rem;
 }
 
 .l20ft {
   left: 20rem;
+}
+
+.l22ft {
+  left: 22rem;
 }
 
 .l23ft {
@@ -1782,7 +1798,8 @@ button.room:hover .room__buffer {
 }
 
 .floor-plan .room--living-modified {
-  height: calc(22.75rem + 0.5rem);
+  top: 3rem;
+  /* height: calc(22.75rem + 0.5rem); */
 }
 
 .floor-plan .room--opening {
